@@ -1,6 +1,10 @@
 # Mt. SAC Computer Science Club Website
 
-![Mt. SAC CS Club](public/static/faviconseal.png)
+<img src="public/static/faviconseal.png" alt="Mt. SAC CS Club" width="100">
+
+[![Next.js](https://img.shields.io/badge/Next.js-13%2B-black)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38bdf8)](https://tailwindcss.com)
 
 This is the official website for the Mt. SAC Computer Science Club, built with Next.js and TailwindCSS. Our website serves as a central hub for club information, events, and resources for our members.
 
