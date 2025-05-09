@@ -24,19 +24,22 @@ const page = () => {
       <Header />
       <div className="flex flex-col mx-auto">
         {/* this div */}
-        <div className="relative h-[98vh] w-full overflow-hidden">
+        <div className="relative h-[90vh] md:h-[98vh] w-full overflow-hidden">
           <Image
             src="/static/header.jpeg"
-            alt="Header"
-            fill
-            className="object-cover"
+            alt="Hero"
+            priority
+            width={1920}
+            height={1080}
+            className="object-cover w-full h-full"
           />
           <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-[black]/80 to-transparent" />
-          <div className="absolute bottom-12 left-12 right-12 z-10">
-            <h1 className="font-garamond text-6xl font-thin mb-4 text-white">
-              Mt. SAC Computer Science Club
+          <div className="absolute bottom-16 md:bottom-12 left-6 md:left-12 right-6 md:right-12 z-10">
+            <h1 className="font-garamond text-4xl md:text-6xl font-thin mb-4 text-white">
+              <span className="block md:inline">Mt. SAC</span> Computer Science
+              Club
             </h1>
-            <p className="text-xl text-white">
+            <p className="text-base md:text-xl text-white">
               Coding an inclusive community of builders
             </p>
           </div>
@@ -44,19 +47,19 @@ const page = () => {
             <ChevronDown size={32} className="animate-bounce" />
           </div>
         </div>
-        <section className="mx-auto p-12">
+        <section className="mx-auto p-6 md:p-12">
           <div className="w-full flex items-center">
-            <h1 className="font-garamond font-thin text-5xl">About Us</h1>
+            <h1 className="font-garamond font-thin text-3xl md:text-5xl">About Us</h1>
           </div>
-          <div className="flex flex-row gap-12 my-4">
-            <div className="flex-shrink-0 w-[350px]">
+          <div className="flex flex-col md:flex-row gap-12 my-4">
+            <div className="flex-shrink-0 w-[250px] mx-auto md:mx-0 md:w-[350px]">
               <Image
                 src="/static/cs_seal.png"
                 width={350}
                 height={350}
                 alt="CS Club Duck"
               />
-              <div className="font-garamond flex flex-col gap-4">
+              <div className="font-garamond flex-col gap-4 hidden md:flex">
                 <p className="text-xl italic text-neutral-900 leading-relaxed tracking-normal max-w-md mx-auto">
                   "CS Club opened up so many doorways for me, both academically
                   and professionally."
@@ -67,8 +70,8 @@ const page = () => {
               </div>
             </div>
             <div className="flex-1 flex flex-col">
-              <h1 className="text-2xl font-medium mb-2">Who we are</h1>
-              <p className="text-base mb-4">
+              <h1 className="text-xl md:text-2xl font-medium mb-2">Who we are</h1>
+              <p className="text-sm md:text-base mb-4">
                 Founded in 2019, the Computer Science Club at Mt. San Antonio
                 College is run for students, by students. We host events, lead
                 workshops, and build projects that foster a strong sense of
@@ -98,11 +101,11 @@ const page = () => {
           </div>
         </section>
 
-        <section className="w-full bg-[#edd7b4] p-12 flex flex-col">
-          <h1 className="text-start font-garamond font-thin text-5xl">
+        <section className="w-full bg-[#edd7b4] p-6 md:p-12 flex flex-col">
+          <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
             Upcoming Events
           </h1>
-          <div className="flex flex-row gap-3 my-8">
+          <div className="flex flex-col md:flex-row gap-3 my-8">
             <EventCard
               imageSrc="/static/events/cs ebcc event.png"
               title="Electric Bluetooth Circuit Car Event"
@@ -114,7 +117,7 @@ const page = () => {
             />
             <EventCard
               imageSrc="/static/events/cs club stem flyer.png"
-              title="Electric Bluetooth Circuit Car Event"
+              title="STEMForOthers Project Event"
               description="Dive into hands-on coding with three dynamic groups—revamp the STEMplore site, design an intermediate Java course, or translate lessons into Python and C++. Choose your crew, build something real."
               date="Spring Fall to"
               location="Remote"
@@ -123,14 +126,14 @@ const page = () => {
             />
           </div>
           <a
-            className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition"
+            className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-xs md:text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition"
             href="/events"
           >
             see full event archive <ArrowRight className="w-4 h-4" />
           </a>
         </section>
-        <section className="w-full py-12 overflow-hidden flex flex-col gap-6">
-          <h1 className="text-start font-garamond font-thin text-5xl px-12">
+        <section className="w-full py-6 md:py-12 overflow-hidden flex flex-col gap-6">
+          <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl px-6 md:px-12">
             Gallery
           </h1>
           <div className="flex flex-col my-4 gap-2 w-full max-w-full">
@@ -148,7 +151,7 @@ const page = () => {
                     <Image
                       src={src}
                       alt={`Gallery image row 1 - ${i + 1}`}
-                      className="rounded-lg shadow-sm object-cover h-[200px] w-[300px]"
+                      className="rounded-lg shadow-sm object-cover h-[100px] md:h-[200px] w-[200px] md:w-[300px]"
                       width={300}
                       height={200}
                     />
@@ -159,7 +162,7 @@ const page = () => {
               speed={40}
               loop={0}
               autoFill={true}
-              className="h-[200px] gap-4"
+              className="md:h-[200px] gap-4"
               pauseOnHover={true}
             >
               {images
@@ -169,7 +172,7 @@ const page = () => {
                     <Image
                       src={src}
                       alt={`Gallery image row 2 - ${i + 1}`}
-                      className="rounded-lg shadow-sm object-cover h-[200px] w-[300px]"
+                      className="rounded-lg shadow-sm object-cover h-[100px] md:h-[200px] w-[200px] md:w-[300px]"
                       width={300}
                       height={200}
                     />
@@ -192,12 +195,12 @@ const page = () => {
             </a>
           </div>
         </section>
-        <section className="w-full py-12 overflow-hidden flex flex-col gap-6 bg-[#edd7b4]">
-          <div className="px-12 flex flex-col gap-4">
-            <h1 className="text-start font-garamond font-thin text-5xl">
+        <section className="w-full py-6 md:py-12 overflow-hidden flex flex-col gap-6 bg-[#edd7b4]">
+          <div className="px-6 md:px-12 flex flex-col gap-4">
+            <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
               Partners & Collaborators
             </h1>
-            <p className="text-start text-gray-700 mb-10 max-w-2xl">
+            <p className="text-start text-gray-700 mb-5 md:mb-10 max-w-2xl">
               We've teamed up with incredible clubs and organizations to create
               interdisciplinary projects, host joint events, and empower more
               students through collaboration.
@@ -254,12 +257,12 @@ const page = () => {
                   href={partner.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mx-6 my-[.5px] flex items-center justify-center rounded-lg cursor-pointer group"
+                  className="mx-2 md:mx-6 my-[.5px] flex items-center justify-center rounded-lg cursor-pointer group"
                 >
                   <Image
                     src={partner.src}
                     alt={`Partner logo ${i + 1}`}
-                    className="rounded-3xl shadow-sm object-contain bg-[#f8ecd4] hover:bg-[#edd7b4] p-4 h-[120px] w-[200px] duration-300 ease-in-out transition"
+                    className="rounded-3xl shadow-sm object-contain bg-[#f8ecd4] hover:bg-[#edd7b4] p-4 h-[100px] md:h-[120px] w-[150px] md:w-[200px] duration-300 ease-in-out transition"
                     width={200}
                     height={120}
                   />
@@ -268,13 +271,13 @@ const page = () => {
             </Marquee>
           </div>
         </section>
-        <section className="w-full py-12 overflow-hidden flex flex-col gap-6">
-          <div className="px-12 flex flex-col gap-4">
-            <h1 className="text-start font-garamond font-thin text-5xl">
+        <section className="w-full py-6 md:py-12 overflow-hidden flex flex-col gap-6">
+          <div className="px-6 md:px-12 flex flex-col gap-4">
+            <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
               Get Involved
             </h1>
-            <div className="w-full flex flex-row gap-4 px-4 my-4">
-              <div className="w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4">
+            <div className="w-full flex flex-col md:flex-row gap-4 px-1 md:px-4 my-4">
+              <div className="md:w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4">
                 <h3 className="font-garamond text-3xl font-strong mb-4">
                   Important Forms
                 </h3>
@@ -284,11 +287,14 @@ const page = () => {
                 </p>
                 <div className="flex flex-col gap-4">
                   <Form title="Club Officer Interest Form" href="/some-link" />
-                  <Form title="Website Feedback Form" href="https://docs.google.com/forms/d/e/1FAIpQLSeacERWRiAnTlXoFRgdWw6ObGU5aqV79HIT5Od5um5mQwm1vg/viewform" />
+                  <Form
+                    title="Website Feedback Form"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeacERWRiAnTlXoFRgdWw6ObGU5aqV79HIT5Od5um5mQwm1vg/viewform"
+                  />
                   <Form title="General Inquiries Form" href="/some-link" />
                 </div>
               </div>
-              <div className="w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4 h-min">
+              <div className="md:w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4 h-min">
                 <h3 className="font-garamond text-3xl font-strong mb-4">
                   Join the Mailing List
                 </h3>

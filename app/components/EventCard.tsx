@@ -32,7 +32,7 @@ const EventCard: React.FC<EventCardProps> = ({
 
   return (
     <div className="w-full bg-[#f8ecd4] rounded-lg overflow-hidden shadow-md flex flex-col">
-      <div className={`relative w-full ${imageHeight || "h-72"}`}>
+      <div className={`hidden md:block relative w-full ${imageHeight || "h-72"}`}>
         <Image
           src={imageSrc}
           alt={title}
@@ -42,13 +42,13 @@ const EventCard: React.FC<EventCardProps> = ({
       </div>
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div className="mb-2">
-          <h3 className="text-lg font-semibold mb-2">{title}</h3>
-          <p className="text-sm text-gray-800 mb-4">{description}</p>
+          <h3 className="text-base md:text-lg font-semibold mb-2">{title}</h3>
+          <p className="text-xs md:text-sm text-gray-800 mb-4">{description}</p>
         </div>
         <div className="flex items-center mb-4 justify-around">
           <div className="pr-4 text-center">
-            <p className="text-sm uppercase">{month}</p>
-            <p className="text-4xl font-medium">{day}</p>
+            <p className="text-xs md:text-sm uppercase">{month}</p>
+            <p className="text-2xl md:text-4xl font-medium">{day}</p>
           </div>
           <div className="flex flex-col justify-center text-sm text-gray-600 space-y-1">
             <div className="flex items-center">

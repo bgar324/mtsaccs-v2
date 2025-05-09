@@ -17,24 +17,22 @@ const page = () => {
           className="object-cover object-[center_50%] brightness-75"
         />
         <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-[black]/80 to-transparent" />
-        <div className="absolute bottom-12 left-12 right-12 z-10">
-          <h1 className="font-garamond text-6xl font-thin mb-4 text-white">
+        <div className="absolute bottom-16 md:bottom-12 left-6 md:left-12 right-6 md:right-12 z-10">
+          <h1 className="font-garamond text-4xl md:text-6xl font-thin mb-4 text-white tracking-tight md:tracking-normal">
             Projects & Presentations
           </h1>
-          <p className="text-xl text-white">
-            Ideas worth sharing. Explore what our club has built, taught, and
-            presented.
+          <p className="text-base md:text-xl text-white">
+            Ideas worth sharing. Explore what our club has built, taught, and presented.
           </p>
         </div>
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in">
           <ChevronDown size={32} className="animate-bounce" />
         </div>
       </div>
-      <section className="w-full p-12 flex flex-col">
-        <h1 className="text-start font-garamond font-thin text-5xl">
-          Intro Workshops
-        </h1>
-        <div className="flex flex-row gap-12 my-8 justify-center">
+
+      <section className="w-full p-6 md:p-12 flex flex-col">
+        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">Intro Workshops</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center">
           <ProjectCard
             title="Intro to Arduino"
             date="11/20/19"
@@ -59,8 +57,6 @@ const page = () => {
             imageSrc="/static/project/Intro to arduino_ projects.png"
             slidesLink="https://docs.google.com/presentation/d/1xuTi38wjr2_dkuBIDsY_mwUNmLzFm_gIkvDvZDcVCEQ/edit#slide=id.g647bcbd391_0_19"
           />
-        </div>
-        <div className="flex flex-row gap-12 my-8 justify-center">
           <ProjectCard
             title="Intro to Web Dev"
             date="10/20/2023"
@@ -69,11 +65,10 @@ const page = () => {
           />
         </div>
       </section>
-      <section className="w-full p-12 flex flex-col bg-[#edd7b4]">
-        <h1 className="text-start font-garamond font-thin text-5xl">
-          Hackathons
-        </h1>
-        <div className="flex flex-row gap-12 mt-8 justify-center">
+
+      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]">
+        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">Hackathons</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 place-items-center">
           <ProjectCard
             title="Citrus Hack 2019"
             date="Fall 2019"
@@ -87,13 +82,11 @@ const page = () => {
             slidesLink="https://docs.google.com/presentation/d/16CZ6Xkcd68mVwhtWgw9XtgK--Ar2U6PZ1aphV6WcviA/edit#slide=id.p"
           />
         </div>
-        <div className="flex flex-row gap-3 my-8"></div>
       </section>
-      <section className="w-full p-12 flex flex-col">
-        <h1 className="text-start font-garamond font-thin text-5xl">
-          Informational Meetings
-        </h1>
-        <div className="flex flex-row gap-12 my-8 justify-center">
+
+      <section className="w-full p-6 md:p-12 flex flex-col">
+        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">Informational Meetings</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center">
           <ProjectCard
             title="Resume Workshop"
             date="5/1/2019"
@@ -118,8 +111,6 @@ const page = () => {
             imageSrc="/static/project/MLH Localhost - No-Code App Building with Mendix - Workshop Slides With Video (v0.0.1).png"
             slidesLink="https://docs.google.com/presentation/d/1TDU9_XIL-FdNbVrhpzmsge8rzIhpQ-2KUVmxTZprgBQ/edit#slide=id.g3f0b50a039_0_0"
           />
-        </div>
-        <div className="flex flex-row gap-12 my-8 justify-center">
           <ProjectCard
             title="Web Development"
             date="5/1/2019"
@@ -128,6 +119,7 @@ const page = () => {
           />
         </div>
       </section>
+
       <Footer />
     </div>
   );

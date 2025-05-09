@@ -18,11 +18,11 @@ const page = () => {
           className="object-cover object-[center_50%] brightness-75"
         />
         <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-[black]/80 to-transparent" />
-        <div className="absolute bottom-12 left-12 right-12 z-10">
-          <h1 className="font-garamond text-6xl font-thin mb-4 text-white">
+        <div className="absolute bottom-16 md:bottom-12 left-6 md:left-12 right-6 md:right-12 z-10">
+          <h1 className="font-garamond text-4xl md:text-6xl font-thin mb-4 text-white">
             Meet the Team
           </h1>
-          <p className="text-xl text-white">
+          <p className="text-base md:text-xl text-white">
             A group of dedicated individuals who lead, support, and guide our
             community forward—on campus and beyond.
           </p>
@@ -31,9 +31,9 @@ const page = () => {
           <ChevronDown size={32} className="animate-bounce" />
         </div>
       </div>
-      <section className="w-full p-12 flex flex-col">
+      <section className="w-full p-6 md:p-12 flex flex-col">
         <div className="flex flex-col gap-4">
-          <h1 className="text-start font-garamond font-thin text-5xl">
+          <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
             Our Advisors
           </h1>
           <p className="text-start text-gray-900 mb-10 max-w-2xl">
@@ -42,24 +42,27 @@ const page = () => {
           </p>
         </div>
         <div className="flex flex-col gap-8">
-          <div className="flex flex-row gap-10 justify-center">
+          <div className="flex flex-col md:flex-row gap-10 justify-center">
             <AdvisorCard
               name="Dominick Atanasio"
-              role="Professor - Computer Science"
+              role="Professor"
+              department = "Computer Science"
               imageSrc="/static/advisors/AtanasioDominick.jpg"
               email="datanasio@mtsac.edu"
               linkedinUrl="https://www.mtsac.edu/profiles/datanasio.html"
             />
             <AdvisorCard
               name="Jonathan Johannsen"
-              role="Professor - Computer Science"
+              role="Professor"
+              department = "Computer Science"
               imageSrc="/static/advisors/jonathan-johannsen-1567033401-square.jpg"
               email="jjohannsen1@mtsac.edu"
               linkedinUrl="https://www.mtsac.edu/profiles/jjohannsen1.html"
             />
             <AdvisorCard
               name="Chun Wong"
-              role="Professor - Computer Science"
+              role="Professor"
+              department = "Computer Science"
               imageSrc="/static/advisors/WongChun.png"
               email="cwong176@mtsac.edu"
               linkedinUrl="https://www.mtsac.edu/profiles/cwong176.html"
@@ -67,9 +70,9 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full p-12 flex flex-col bg-[#edd7b4]">
+      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]">
         <div className="flex flex-col gap-4">
-          <h1 className="text-start font-garamond font-thin text-5xl">
+          <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
             Our Officers
           </h1>
           <p className="text-start text-gray-900 mb-10 max-w-2xl">
@@ -79,7 +82,8 @@ const page = () => {
           </p>
         </div>
         <div className="flex flex-col gap-8">
-          <div className="flex flex-row gap-10 justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+    
             <OfficerCard
               name="Bowen Wu"
               role="President"
@@ -102,7 +106,8 @@ const page = () => {
               linkedinUrl="https://www.linkedin.com/in/jessica-c-47b77332b/"
             />
           </div>
-          <div className="flex flex-row gap-10 justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+    
             <OfficerCard
               name="Van Lai Sy"
               role="Treasurer"
@@ -125,7 +130,8 @@ const page = () => {
               linkedinUrl="https://www.linkedin.com/in/btgarcia05/"
             />
           </div>
-          <div className="flex flex-row gap-10 justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+    
             <OfficerCard
               name="Natalie Guillen"
               role="Workshop Officer"

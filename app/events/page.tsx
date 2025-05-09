@@ -126,11 +126,11 @@ const page = () => {
           className="object-cover object-[center_40%] brightness-75"
         />
         <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-[black]/80 to-transparent" />
-        <div className="absolute bottom-12 left-12 right-12 z-10">
-          <h1 className="font-garamond text-6xl font-thin mb-4 text-white">
+        <div className="absolute bottom-16 md:bottom-12 left-6 md:left-12 right-6 md:right-12 z-10">
+          <h1 className="font-garamond text-4xl md:text-6xl font-thin mb-4 text-white">
             Events & Workshops
           </h1>
-          <p className="text-xl text-white">
+          <p className="text-base md:text-xl text-white">
             From circuit builds to speaker panels, every event is a chance to
             learn, connect, and create. No experience needed.
           </p>
@@ -139,8 +139,8 @@ const page = () => {
           <ChevronDown size={32} className="animate-bounce" />
         </div>
       </div>
-      <section className="w-full p-12 flex flex-col">
-        <h1 className="text-start font-garamond font-thin text-5xl mb-8">
+      <section className="w-full p-6 md:p-12 flex flex-col">
+        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
           Upcoming Events
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -159,8 +159,8 @@ const page = () => {
         </div>
       </section>
 
-      <section className="w-full p-12 flex flex-col bg-[#edd7b4]">
-        <h1 className="text-start font-garamond font-thin text-5xl mb-8">
+      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]">
+        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
           Past Events
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
