@@ -8,6 +8,10 @@
 
 This is the official website for the Mt. SAC Computer Science Club, built with Next.js and TailwindCSS. Our website serves as a central hub for club information, events, and resources for our members.
 
+## 🎯 Project Overview
+
+The first version of the CS Club website fulfilled its purpose but lacked structure, scalability, and visual consistency across pages. Version 2 was built to resolve these limitations by adopting a more thoughtful design system, mobile-first responsiveness, and a simplified codebase using modern tooling (Next.js 14, TailwindCSS, Lucide). This iteration focuses on accessibility, cohesive branding, and smoother UX across both static content and dynamic event functionality. It's a foundation not just for aesthetics, but for maintainability and contribution going forward.
+
 ## 🚀 Features
 
 - **Modern Design**: Built with a clean, responsive interface using TailwindCSS
