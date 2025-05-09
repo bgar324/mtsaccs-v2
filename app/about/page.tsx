@@ -2,127 +2,140 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 const page = () => {
   return (
-    <div className="min-h-screen min-w-screen overflow-x-hidden">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Header />
-      <div className="flex flex-col mx-auto max-w-7xl">
-        {/* Section 1: Intro */}
-        <section className="flex flex-row gap-6 px-12 w-full my-24 overflow-hidden">
-          <div className="flex flex-row gap-16">
-            <div className="flex flex-col mt-6 max-w-2xl">
-              <p className="text-sm italic font-garamond text-gray-500 leading-relaxed">
-                Student-led. Welcoming.
-              </p>
-              <h1 className="font-garamond text-6xl font-thin mb-4 text-black">
-                Curious about who we are?
-              </h1>
-              <p className="text-xl text-black">
-                We’re a student-led community at Mt. SAC dedicated to making
-                Computer Science approachable, hands-on, and welcoming for
-                everyone—no experience needed.
-              </p>
-            </div>
-            <Image
-              src="/static/about-us/duck-questioning.png"
-              width={250}
-              height={250}
-              alt="Duck Questioning"
-              className = "ml-16"
-            />
-          </div>
-        </section>
-        <section className="w-full py-12 overflow-hidden flex flex-row gap-6 px-12 bg-[#edd7b4]">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-start font-garamond font-thin text-5xl">
-              Our Mission
-            </h1>
-            <div className="flex flex-col gap-4">
-              <p className="text-start text-gray-700 max-w-2xl">
-                The Computer Science Club at Mt. San Antonio College is a
-                welcoming community that fosters growth and collaboration in
-                technology. Our mission is to make computer science fun and
-                accessible while helping students develop technical and
-                leadership skills.
-              </p>
-              <p className="text-start text-gray-700 max-w-2xl">
-                We host workshops, tutoring sessions, and hands-on activities to
-                complement coursework and encourage innovation. Members also
-                gain access to networking opportunities with peers and industry
-                professionals.
-              </p>
-              <p className="text-start text-gray-700 max-w-2xl">
-                Open to all Mt. SAC students, the club is inclusive and
-                fee-free, offering a supportive space to explore computer
-                science regardless of experience level.
-              </p>
-              <p className="text-start text-gray-700 max-w-2xl">
-                Above all, we strive to build a sense of community, inspiring a
-                love for learning and a culture of support and innovation among
-                our members.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <Image
-              src="/static/about-us/overhead-shot.jpg"
-              width={500}
-              height={300}
-              alt="Overhead Shot"
-              className="rounded-xl"
-            />
-            <Image
-              src="/static/gallery/csclub-clubday.jpg"
-              width={500}
-              height={350}
-              alt="Club mission in action"
-              className="rounded-xl"
-            />
-          </div>
-        </section>
 
-        {/* Section 3: Meet Our Advisors */}
-        <div className="w-full bg-[#f8ecd4] py-24 px-32">
-          <h2 className="font-garamond text-4xl font-thin mb-12 text-black">
-            Meet Our Advisors
-          </h2>
-          <div className="flex flex-wrap gap-12">
-            {[
-              {
-                name: "Prof. Lynn Moore",
-                url: "https://mtsac.edu/csci/moore",
-              },
-              {
-                name: "Prof. Michael Perez",
-                url: "https://mtsac.edu/csci/perez",
-              },
-            ].map((advisor, index) => (
-              <div key={index} className="flex flex-col items-center gap-3">
-                <div className="w-24 h-24 rounded-full bg-gray-300" />
-                <p className="text-lg font-medium text-black">{advisor.name}</p>
-                <a
-                  href={advisor.url}
-                  target="_blank"
-                  className="px-4 py-1 border border-black rounded-full text-sm hover:bg-black hover:text-white transition duration-300"
-                >
-                  View Profile
-                </a>
-              </div>
-            ))}
-          </div>
+      {/* Hero Section */}
+      <div className="relative h-[60vh] w-full overflow-hidden">
+        <Image
+          src="/static/gallery/20250502_185939.jpg"
+          alt="Header"
+          fill
+          className="object-cover object-[center_70%] brightness-75"
+        />
+        <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-[black]/80 to-transparent" />
+        <div className="absolute bottom-12 left-12 right-12 z-10">
+          <h1 className="font-garamond text-6xl font-thin mb-4 text-white">
+            About the Computer Science Club
+          </h1>
+          <p className="text-xl text-white">
+            A student-powered hub for tech growth, learning, and community at Mt. SAC
+          </p>
         </div>
-
-        {/* Section 4: CTA */}
-        <div className="w-full bg-[#edd7b4] py-16 flex justify-center">
-          <a
-            href="/team"
-            className="border border-black px-6 py-2 rounded-full text-sm font-medium hover:bg-black hover:text-white transition duration-300"
-          >
-            Meet the Team →
-          </a>
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in">
+          <ChevronDown size={32} className="animate-bounce" />
         </div>
       </div>
+
+      {/* Mission Section */}
+      <section className="py-24 px-6 lg:px-32 bg-[#edd7b4]">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-garamond mb-4">Our Mission</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Founded in 2019, our club creates a welcoming space where students grow through building.
+            From beginner-friendly workshops to advanced projects, we make Computer Science hands-on,
+            inclusive, and impactful—by students, for students.
+          </p>
+        </div>
+      </section>
+
+      {/* What We Do Section */}
+      <section className="py-24 px-6 lg:px-32">
+        <h2 className="text-4xl font-garamond text-center mb-12">What We Do</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            ["Workshops", "Beginner-friendly tech sessions on real-world tools."],
+            ["Projects", "Team-based dev work with mentorship and publishing."],
+            ["Hackathons", "Local and national tech competitions with support."],
+            ["Tutoring & Help", "We support each other—no one learns alone here."],
+            ["Guest Speakers", "Insights from industry professionals and alumni."],
+            ["Collaborations", "Cross-club teamwork that bridges disciplines."]
+          ].map(([title, desc]) => (
+            <div key={title} className="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-black mb-2">{title}</h3>
+              <p className="text-gray-700">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Club Values Section */}
+      <section className="py-24 px-6 lg:px-32 bg-[#edd7b4]">
+        <h2 className="text-4xl font-garamond text-center mb-12">Club Values</h2>
+        <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
+          {[
+            ["🧠", "Curiosity", "We encourage learning by doing and questioning everything."],
+            ["🤝", "Community", "Supportive culture built on collaboration, not competition."],
+            ["🔧", "Building", "We value execution. Code, test, ship, improve."],
+            ["🌱", "Growth", "We grow technically and personally—every event is a step forward."],
+            ["🎯", "Impact", "We want our work to help others and improve lives."]
+          ].map(([emoji, title, desc]) => (
+            <div key={title} className="text-center max-w-xs">
+              <div className="text-5xl">{emoji}</div>
+              <h3 className="text-xl font-semibold mt-4">{title}</h3>
+              <p className="text-gray-700 mt-2">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Leadership Structure Section */}
+      <section className="py-24 px-6 lg:px-32">
+        <h2 className="text-4xl font-garamond text-center mb-12">Leadership Structure</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            ["President", "Leads vision, coordination, and represents the club."],
+            ["Vice President", "Supports leadership and operations."],
+            ["Projects Lead", "Guides team projects and technical initiatives."],
+            ["Events Lead", "Plans workshops, panels, and socials."],
+            ["Outreach", "Builds partnerships and promotes the club."],
+            ["Design", "Owns visuals, graphics, and branding."]
+          ].map(([role, desc]) => (
+            <div key={role} className="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-black mb-2">{role}</h3>
+              <p className="text-gray-700">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Meet Our Advisors Section */}
+      <section className="py-24 px-6 lg:px-32 bg-[#edd7b4]">
+        <h2 className="text-4xl font-garamond text-center mb-12">Meet Our Advisors</h2>
+        <div className="flex flex-wrap justify-center gap-12 max-w-4xl mx-auto">
+          {[
+            {
+              name: "Ms. Alorro",
+              title: "Faculty Advisor",
+              desc: "Guides our growth with her experience in design and mentorship.",
+              img: "/static/advisors/alorro.webp"
+            },
+            {
+              name: "Mr. Smith",
+              title: "Technical Advisor",
+              desc: "Provides insights into systems, backend, and academic direction.",
+              img: "/static/advisors/smith.webp"
+            }
+          ].map(({ name, title, desc, img }) => (
+            <div key={name} className="text-center max-w-xs">
+              <Image
+                src={img}
+                alt={name}
+                width={128}
+                height={128}
+                className="mx-auto rounded-full object-cover"
+              />
+              <h3 className="text-lg font-semibold mt-4">{name}</h3>
+              <p className="text-sm italic text-gray-600">{title}</p>
+              <p className="text-gray-700 mt-2">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <Footer />
     </div>

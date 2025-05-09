@@ -12,6 +12,7 @@ interface EventCardProps {
   rsvpUrl: string;
   imageHeight?: string;
   imagePosition?: string;
+  isArchived?: boolean;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -24,18 +25,19 @@ const EventCard: React.FC<EventCardProps> = ({
   rsvpUrl,
   imageHeight,
   imagePosition,
+  isArchived = false,
 }) => {
   const [day, ...monthArr] = date.split(" ");
   const month = monthArr.join(" ");
 
   return (
-    <div className="w-1/3 bg-[#f8ecd4] rounded-lg overflow-hidden shadow-md m-2 flex flex-col">
-      <div className={`relative w-full ${imageHeight || "h-48"}`}>
+    <div className="w-full bg-[#f8ecd4] rounded-lg overflow-hidden shadow-md flex flex-col">
+      <div className={`relative w-full ${imageHeight || "h-72"}`}>
         <Image
           src={imageSrc}
           alt={title}
           fill
-          className={`object-cover ${imagePosition || "object-center"}`}
+          className={`object-cover object-[center_5%] ${imagePosition || ""}`}
         />
       </div>
       <div className="p-4 flex-1 flex flex-col justify-between">
@@ -59,20 +61,18 @@ const EventCard: React.FC<EventCardProps> = ({
             </div>
           </div>
         </div>
-        <div className="flex flex-row gap-4">
-          <a
-            href={rsvpUrl}
-            className="block w-5/8 py-2 border border-gray-400 rounded text-sm font-medium text-center bg-[#f8ecd4] hover:bg-[#edd7b4] duration-400 ease-in-out transition"
-          >
-            RSVP
-          </a>
-          <a
-            href={rsvpUrl}
-            className="block w-3/8 py-2 border border-gray-400 rounded font-medium text-center bg-black/90 hover:bg-gray-100 duration-400 ease-in-out transition text-white hover:text-black text-sm"
-          >
-            More Info
-          </a>
-        </div>
+          {isArchived ? (
+            <div className="py-2 border border-gray-400 rounded text-sm font-medium text-center text-gray-500 bg-gray-100 cursor-not-allowed">
+              Event Ended
+            </div>
+          ) : (
+            <a
+              href={rsvpUrl}
+              className="py-2 border border-gray-400 rounded text-sm font-medium text-center bg-[#f8ecd4] hover:bg-[#edd7b4] duration-400 ease-in-out transition"
+            >
+              RSVP
+            </a>
+          )}
       </div>
     </div>
   );

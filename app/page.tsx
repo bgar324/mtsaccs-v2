@@ -20,9 +20,9 @@ const page = () => {
     "/static/gallery/csclub-clubday.jpg",
   ];
   return (
-    <div className="min-h-screen min-w-screen overflow-x-hidden">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Header />
-      <div className="flex flex-col max-w-7xl mx-auto">
+      <div className="flex flex-col mx-auto">
         {/* this div */}
         <div className="relative h-[98vh] w-full overflow-hidden">
           <Image
@@ -39,15 +39,12 @@ const page = () => {
             <p className="text-xl text-white">
               Coding an inclusive community of builders
             </p>
-            {/* <p className = "text-sm text-white">
-              Scroll to explore.
-            </p> */}
           </div>
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in">
             <ChevronDown size={32} className="animate-bounce" />
           </div>
         </div>
-        <section className="w-full p-12">
+        <section className="mx-auto p-12">
           <div className="w-full flex items-center">
             <h1 className="font-garamond font-thin text-5xl">About Us</h1>
           </div>
@@ -113,9 +110,7 @@ const page = () => {
               date="30 Apr."
               location="Building 60, Rm. 1620 & 1628"
               time="3:00 PM - 7:00 PM"
-              rsvpUrl="sda"
-              imageHeight="h-64"
-              imagePosition="object-top"
+              rsvpUrl="https://forms.gle/RRSre4LhTXs2kPH38"
             />
             <EventCard
               imageSrc="/static/events/cs club stem flyer.png"
@@ -123,26 +118,25 @@ const page = () => {
               description="Dive into hands-on coding with three dynamic groups—revamp the STEMplore site, design an intermediate Java course, or translate lessons into Python and C++. Choose your crew, build something real."
               date="Spring Fall to"
               location="Remote"
-              time="N/A"
-              rsvpUrl="sda"
-              imageHeight="h-64"
-              imagePosition="object-top"
+              time="-"
+              rsvpUrl="https://forms.gle/UwmMgbQhD57Zou386"
             />
           </div>
-          <button className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition">
+          <a
+            className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition"
+            href="/events"
+          >
             see full event archive <ArrowRight className="w-4 h-4" />
-          </button>
+          </a>
         </section>
         <section className="w-full py-12 overflow-hidden flex flex-col gap-6">
           <h1 className="text-start font-garamond font-thin text-5xl px-12">
             Gallery
           </h1>
-          <div className="flex flex-col gap-4 mx-12 my-4 rounded-md w-fit">
+          <div className="flex flex-col my-4 gap-2 w-full max-w-full">
             <Marquee
               speed={40}
-              // gradient={true}
-              // gradientColor="#f8ecd4"
-              // gradientWidth={80}
+              autoFill={true}
               loop={0}
               className="gap-4"
               pauseOnHover={true}
@@ -161,14 +155,11 @@ const page = () => {
                   </div>
                 ))}
             </Marquee>
-            {/* Second row: right to left */}
             <Marquee
               speed={40}
-              // gradient={true}
-              // gradientWidth={80}
-              // gradientColor="#f8ecd4"
               loop={0}
-              className="gap-4"
+              autoFill={true}
+              className="h-[200px] gap-4"
               pauseOnHover={true}
             >
               {images
@@ -187,15 +178,18 @@ const page = () => {
             </Marquee>
           </div>
           <div className="flex flex-col items-center text-center justify-center gap-2">
-            <p className="text-lg font-medium text-gray-700">
+            <p className="text-lg font-medium text-gray-900">
               These moments were captured at our workshops and events.
             </p>
             <p className="text-sm text-gray-500 mb-4">
               Curious what we built? Explore the full project archive below.
             </p>
-            <button className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition">
+            <a
+              className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition"
+              href="/projects"
+            >
               see full project archive <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         </section>
         <section className="w-full py-12 overflow-hidden flex flex-col gap-6 bg-[#edd7b4]">
@@ -211,7 +205,7 @@ const page = () => {
           </div>
 
           <div className="flex flex-col gap-4 rounded-md w-fit">
-            <Marquee speed={40} pauseOnHover={true}>
+            <Marquee speed={40} pauseOnHover={true} autoFill={true}>
               {[
                 { src: "/static/partners/mlh.png", url: "https://mlh.io/" },
                 {
@@ -282,7 +276,7 @@ const page = () => {
             <div className="w-full flex flex-row gap-4 px-4 my-4">
               <div className="w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4">
                 <h3 className="font-garamond text-3xl font-strong mb-4">
-                  Imporant Forms
+                  Important Forms
                 </h3>
                 <p className="text-start text-gray-900 mb-6">
                   Interested in becoming an officer or giving feedback? Submit a
@@ -290,7 +284,7 @@ const page = () => {
                 </p>
                 <div className="flex flex-col gap-4">
                   <Form title="Club Officer Interest Form" href="/some-link" />
-                  <Form title="Website Feedback Form" href="/some-link" />
+                  <Form title="Website Feedback Form" href="https://docs.google.com/forms/d/e/1FAIpQLSeacERWRiAnTlXoFRgdWw6ObGU5aqV79HIT5Od5um5mQwm1vg/viewform" />
                   <Form title="General Inquiries Form" href="/some-link" />
                 </div>
               </div>
@@ -303,7 +297,7 @@ const page = () => {
                   opportunities. We'll only send what matters.
                 </p>
                 <a
-                  href="/some-form"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScxLfb-J6ADbh93Nr3JSLsZD2LtCp9Y7zVORY5YkhY4QY6fgA/viewform"
                   className="w-full text-center items-center py-2 rounded-md block bg-[#edd7b4] hover:bg-[#f8ecd4] text-black hover:text-black/90 duration-400 hover:border-white ease-in-out transition"
                 >
                   Join via Google Form

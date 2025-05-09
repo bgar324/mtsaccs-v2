@@ -1,6 +1,6 @@
-import React from "react"
-import Image from "next/image"
-import { GithubIcon, DiscordIcon, InstagramIcon } from "../Icons"
+import React from "react";
+import Image from "next/image";
+import { GithubIcon, DiscordIcon, InstagramIcon } from "../Icons";
 
 const Footer = () => {
   return (
@@ -18,21 +18,57 @@ const Footer = () => {
               className="shrink-0"
             />
             <div>
-              <p className="font-garamond text-lg font-thin">Mt. SAC Computer Science Club</p>
+              <p className="font-garamond text-lg font-thin">
+                Mt. SAC Computer Science Club
+              </p>
               <p className="mt-1 text-xs">
-                Made with ❤️, <a className = "hover:text-blue-500 transition duration-300 ease-in-out cursor-pointer" href = "https://linkedin.com/in/btgarcia05" target = "_blank">Benjamin Garcia</a>
+                Made with ❤️,{" "}
+                <a
+                  className="hover:text-blue-500 transition duration-300 ease-in-out cursor-pointer"
+                  href="https://linkedin.com/in/btgarcia05"
+                  target="_blank"
+                >
+                  Benjamin Garcia
+                </a>
               </p>
             </div>
           </div>
 
           {/* Nav Links */}
           <ul className="flex flex-wrap gap-6 items-center text-sm font-medium">
-            <li><a href="/about" className="hover:underline">About</a></li>
-            <li><a href="/events" className="hover:underline">Events</a></li>
-            <li><a href="/team" className="hover:underline">Team</a></li>
-            <li><a href="/projects" className="hover:underline">Projects</a></li>
-            <li><a href="/join" className="hover:underline">Join us!</a></li>
-            <li><a href="/forms" className="hover:underline">Mailing list</a></li>
+            <li>
+              <a href="/about" className="hover:underline">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/events" className="hover:underline">
+                Events
+              </a>
+            </li>
+            <li>
+              <a href="/team" className="hover:underline">
+                Team
+              </a>
+            </li>
+            <li>
+              <a href="/projects" className="hover:underline">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="/join-us" className="hover:underline">
+                Join us!
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScxLfb-J6ADbh93Nr3JSLsZD2LtCp9Y7zVORY5YkhY4QY6fgA/viewform"
+                className="hover:underline"
+              >
+                Mailing list
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -43,20 +79,23 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
           <p>© 2025 Mt. SAC Computer Science Club. All rights reserved.</p>
           <div className="flex space-x-4">
-            <a href="https://github.com" className="hover:text-white">
+            <a href="https://github.com/mtsac-cs" className="hover:text-white">
               <GithubIcon className="w-4 h-4" />
             </a>
-            <a href="https://discord.com" className="hover:text-white">
+            <a href="https://discord.com/invite/sWpjfHVuuT" className="hover:text-white">
               <DiscordIcon className="w-4 h-4" />
             </a>
-            <a href="https://instagram.com" className="hover:text-white">
+            <a
+              href="https://www.instagram.com/cs.mtsac/"
+              className="hover:text-white"
+            >
               <InstagramIcon className="w-4 h-4" />
             </a>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
