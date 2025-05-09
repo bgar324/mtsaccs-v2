@@ -2,21 +2,36 @@ import React from "react";
 import Header from "./components/Header";
 import Image from "next/image";
 import EventCard from "./components/EventCard";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import Marquee from "react-fast-marquee";
+import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 const page = () => {
+  const images = [
+    "/static/gallery/11.2 Mt.Sac CS x AGS Club.jpg",
+    "/static/gallery/20241203_170013.jpg",
+    "/static/gallery/20250502_185939.jpg",
+    "/static/gallery/71763995403__FBEFE8F6-4B79-4F6C-A583-3C28F72D087C.jpg",
+    "/static/gallery/IMG_4719.jpg",
+    "/static/gallery/IMG_5434.jpg",
+    "/static/gallery/IMG_5435.jpg",
+    "/static/gallery/IMG_8061.jpg",
+    "/static/gallery/csclub-clubday.jpg",
+  ];
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <div className="min-h-screen min-w-screen overflow-x-hidden">
       <Header />
-      <div className="flex flex-col w-full">
-        <div className="relative h-[88vh] w-full overflow-hidden">
+      <div className="flex flex-col max-w-7xl mx-auto">
+        {/* this div */}
+        <div className="relative h-[98vh] w-full overflow-hidden">
           <Image
             src="/static/header.jpeg"
             alt="Header"
             fill
             className="object-cover"
           />
-          <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black/80 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-[black]/80 to-transparent" />
           <div className="absolute bottom-12 left-12 right-12 z-10">
             <h1 className="font-garamond text-6xl font-thin mb-4 text-white">
               Mt. SAC Computer Science Club
@@ -24,13 +39,19 @@ const page = () => {
             <p className="text-xl text-white">
               Coding an inclusive community of builders
             </p>
+            {/* <p className = "text-sm text-white">
+              Scroll to explore.
+            </p> */}
+          </div>
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in">
+            <ChevronDown size={32} className="animate-bounce" />
           </div>
         </div>
-        <section className="w-full mb-6">
-          <div className="h-[12vh] w-full px-12 py-6 flex items-center">
+        <section className="w-full p-12">
+          <div className="w-full flex items-center">
             <h1 className="font-garamond font-thin text-5xl">About Us</h1>
           </div>
-          <div className="flex flex-row gap-12 px-16 mt-4">
+          <div className="flex flex-row gap-12 my-4">
             <div className="flex-shrink-0 w-[350px]">
               <Image
                 src="/static/cs_seal.png"
@@ -80,7 +101,7 @@ const page = () => {
           </div>
         </section>
 
-        <section className="w-full mb-6 bg-[#edd7b4] px-12 py-6 flex flex-col">
+        <section className="w-full bg-[#edd7b4] p-12 flex flex-col">
           <h1 className="text-start font-garamond font-thin text-5xl">
             Upcoming Events
           </h1>
@@ -108,10 +129,190 @@ const page = () => {
               imagePosition="object-top"
             />
           </div>
-          <button className = "uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition">
-            see full event archive <ArrowRight className="w-4 h-4"/>
+          <button className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition">
+            see full event archive <ArrowRight className="w-4 h-4" />
           </button>
         </section>
+        <section className="w-full py-12 overflow-hidden flex flex-col gap-6">
+          <h1 className="text-start font-garamond font-thin text-5xl px-12">
+            Gallery
+          </h1>
+          <div className="flex flex-col gap-4 mx-12 my-4 rounded-md w-fit">
+            <Marquee
+              speed={40}
+              // gradient={true}
+              // gradientColor="#f8ecd4"
+              // gradientWidth={80}
+              loop={0}
+              className="gap-4"
+              pauseOnHover={true}
+            >
+              {images
+                .filter((_, i) => i % 2 === 0)
+                .map((src, i) => (
+                  <div key={i} className="mx-2">
+                    <Image
+                      src={src}
+                      alt={`Gallery image row 1 - ${i + 1}`}
+                      className="rounded-lg shadow-sm object-cover h-[200px] w-[300px]"
+                      width={300}
+                      height={200}
+                    />
+                  </div>
+                ))}
+            </Marquee>
+            {/* Second row: right to left */}
+            <Marquee
+              speed={40}
+              // gradient={true}
+              // gradientWidth={80}
+              // gradientColor="#f8ecd4"
+              loop={0}
+              className="gap-4"
+              pauseOnHover={true}
+            >
+              {images
+                .filter((_, i) => i % 2 === 1)
+                .map((src, i) => (
+                  <div key={i} className="mx-2">
+                    <Image
+                      src={src}
+                      alt={`Gallery image row 2 - ${i + 1}`}
+                      className="rounded-lg shadow-sm object-cover h-[200px] w-[300px]"
+                      width={300}
+                      height={200}
+                    />
+                  </div>
+                ))}
+            </Marquee>
+          </div>
+          <div className="flex flex-col items-center text-center justify-center gap-2">
+            <p className="text-lg font-medium text-gray-700">
+              These moments were captured at our workshops and events.
+            </p>
+            <p className="text-sm text-gray-500 mb-4">
+              Curious what we built? Explore the full project archive below.
+            </p>
+            <button className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition">
+              see full project archive <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </section>
+        <section className="w-full py-12 overflow-hidden flex flex-col gap-6 bg-[#edd7b4]">
+          <div className="px-12 flex flex-col gap-4">
+            <h1 className="text-start font-garamond font-thin text-5xl">
+              Partners & Collaborators
+            </h1>
+            <p className="text-start text-gray-700 mb-10 max-w-2xl">
+              We've teamed up with incredible clubs and organizations to create
+              interdisciplinary projects, host joint events, and empower more
+              students through collaboration.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4 rounded-md w-fit">
+            <Marquee speed={40} pauseOnHover={true}>
+              {[
+                { src: "/static/partners/mlh.png", url: "https://mlh.io/" },
+                {
+                  src: "/static/partners/stemforothers.png",
+                  url: "https://www.stemforothers.org/",
+                },
+                {
+                  src: "/static/partners/btk.png",
+                  url: "https://www.breakthroughtech.org/",
+                },
+                {
+                  src: "/static/partners/ags.png",
+                  url: "https://www.instagram.com/mtsacags/",
+                },
+                {
+                  src: "/static/partners/caduceus.png",
+                  url: "https://www.instagram.com/mtsac.caduceusclub/",
+                },
+                {
+                  src: "/static/partners/engr-club.png",
+                  url: "https://www.instagram.com/mtsac.engrclub.official/",
+                },
+                {
+                  src: "/static/partners/gain.png",
+                  url: "https://www.instagram.com/mtsac_gain",
+                },
+                {
+                  src: "/static/partners/ptk.png",
+                  url: "https://www.instagram.com/ptkaoa",
+                },
+                {
+                  src: "/static/partners/smacs.png",
+                  url: "https://smacs.vercel.app/",
+                },
+                {
+                  src: "/static/partners/swe-mtsac.png",
+                  url: "https://www.instagram.com/swe.mtsac/",
+                },
+                {
+                  src: "/static/partners/webshare.png",
+                  url: "https://www.instagram.com/webshare.official",
+                },
+              ].map((partner, i) => (
+                <a
+                  key={i}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mx-6 my-[.5px] flex items-center justify-center rounded-lg cursor-pointer group"
+                >
+                  <Image
+                    src={partner.src}
+                    alt={`Partner logo ${i + 1}`}
+                    className="rounded-3xl shadow-sm object-contain bg-[#f8ecd4] hover:bg-[#edd7b4] p-4 h-[120px] w-[200px] duration-300 ease-in-out transition"
+                    width={200}
+                    height={120}
+                  />
+                </a>
+              ))}
+            </Marquee>
+          </div>
+        </section>
+        <section className="w-full py-12 overflow-hidden flex flex-col gap-6">
+          <div className="px-12 flex flex-col gap-4">
+            <h1 className="text-start font-garamond font-thin text-5xl">
+              Get Involved
+            </h1>
+            <div className="w-full flex flex-row gap-4 px-4 my-4">
+              <div className="w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4">
+                <h3 className="font-garamond text-3xl font-strong mb-4">
+                  Imporant Forms
+                </h3>
+                <p className="text-start text-gray-900 mb-6">
+                  Interested in becoming an officer or giving feedback? Submit a
+                  form below to help shape our club.
+                </p>
+                <div className="flex flex-col gap-4">
+                  <Form title="Club Officer Interest Form" href="/some-link" />
+                  <Form title="Website Feedback Form" href="/some-link" />
+                  <Form title="General Inquiries Form" href="/some-link" />
+                </div>
+              </div>
+              <div className="w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4 h-min">
+                <h3 className="font-garamond text-3xl font-strong mb-4">
+                  Join the Mailing List
+                </h3>
+                <p className="text-start text-gray-900 mb-6">
+                  Get updates about upcoming events, workshops, and
+                  opportunities. We'll only send what matters.
+                </p>
+                <a
+                  href="/some-form"
+                  className="w-full text-center items-center py-2 rounded-md block bg-[#edd7b4] hover:bg-[#f8ecd4] text-black hover:text-black/90 duration-400 hover:border-white ease-in-out transition"
+                >
+                  Join via Google Form
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Footer />
       </div>
     </div>
   );

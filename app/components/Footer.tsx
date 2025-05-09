@@ -1,11 +1,61 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react"
+import Image from "next/image"
+import { GithubIcon, DiscordIcon, InstagramIcon } from "../Icons"
 
 const Footer = () => {
   return (
-    <div className = "w-full py-4 px-2 justify-between">
-      <Image src = "/static/logo.svg" width = {300} height = {300} alt = "Mt. SAC CS Club logo"/>
-    </div>
+    <footer className="bg-[#D5C2A2] w-full text-sm text-black px-6 py-10">
+      <div className="max-w-6xl mx-auto flex flex-col gap-8">
+        {/* Top Row */}
+        <div className="flex flex-col md:flex-row justify-between gap-8">
+          {/* Logo + Text */}
+          <div className="flex gap-4 items-start">
+            <Image
+              src="/static/gray_cs_seal.png"
+              width={48}
+              height={48}
+              alt="CS Club Seal"
+              className="shrink-0"
+            />
+            <div>
+              <p className="font-garamond text-lg font-thin">Mt. SAC Computer Science Club</p>
+              <p className="mt-1 text-xs">
+                Made with ❤️, <a className = "hover:text-blue-500 transition duration-300 ease-in-out cursor-pointer" href = "https://linkedin.com/in/btgarcia05" target = "_blank">Benjamin Garcia</a>
+              </p>
+            </div>
+          </div>
+
+          {/* Nav Links */}
+          <ul className="flex flex-wrap gap-6 items-center text-sm font-medium">
+            <li><a href="/about" className="hover:underline">About</a></li>
+            <li><a href="/events" className="hover:underline">Events</a></li>
+            <li><a href="/team" className="hover:underline">Team</a></li>
+            <li><a href="/projects" className="hover:underline">Projects</a></li>
+            <li><a href="/join" className="hover:underline">Join us!</a></li>
+            <li><a href="/forms" className="hover:underline">Mailing list</a></li>
+          </ul>
+        </div>
+
+        {/* Divider */}
+        <hr className="border-black/20" />
+
+        {/* Bottom Row */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+          <p>© 2025 Mt. SAC Computer Science Club. All rights reserved.</p>
+          <div className="flex space-x-4">
+            <a href="https://github.com" className="hover:text-white">
+              <GithubIcon className="w-4 h-4" />
+            </a>
+            <a href="https://discord.com" className="hover:text-white">
+              <DiscordIcon className="w-4 h-4" />
+            </a>
+            <a href="https://instagram.com" className="hover:text-white">
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   )
 }
 
