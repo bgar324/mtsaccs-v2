@@ -22,7 +22,8 @@ const page = () => {
             Projects & Presentations
           </h1>
           <p className="text-base md:text-xl text-white">
-            Ideas worth sharing. Explore what our club has built, taught, and presented.
+            Ideas worth sharing. Explore what our club has built, taught, and
+            presented.
           </p>
         </div>
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in">
@@ -31,8 +32,10 @@ const page = () => {
       </div>
 
       <section className="w-full p-6 md:p-12 flex flex-col">
-        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">Intro Workshops</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center px-6 lg:px-14 xl:px-36">
+        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
+          Intro Workshops
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center px-2">
           <ProjectCard
             title="Intro to Arduino"
             date="11/20/19"
@@ -54,7 +57,7 @@ const page = () => {
           <ProjectCard
             title="Intro to Git and Github"
             date="10/2/2019"
-            imageSrc="/static/project/Intro to arduino_ projects.png"
+            imageSrc="/static/project/Intro to git and github.png"
             slidesLink="https://docs.google.com/presentation/d/1xuTi38wjr2_dkuBIDsY_mwUNmLzFm_gIkvDvZDcVCEQ/edit#slide=id.g647bcbd391_0_19"
           />
           <ProjectCard
@@ -67,8 +70,10 @@ const page = () => {
       </section>
 
       <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]">
-        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">Hackathons</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 place-items-center px-6 lg:px-14 xl:px-36">
+        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
+          Hackathons
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 place-items-center px-2">
           <ProjectCard
             title="Citrus Hack 2019"
             date="Fall 2019"
@@ -85,8 +90,10 @@ const page = () => {
       </section>
 
       <section className="w-full p-6 md:p-12 flex flex-col">
-        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">Informational Meetings</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center md:px-12 lg:px-14 xl:px-36">
+        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
+          Informational Meetings
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center px-2">
           <ProjectCard
             title="Resume Workshop"
             date="5/1/2019"

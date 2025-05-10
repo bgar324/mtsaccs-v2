@@ -77,12 +77,26 @@ const Footer = () => {
 
         {/* Bottom Row */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-          <p>© 2025 Mt. SAC Computer Science Club. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p>© 2025 Mt. SAC Computer Science Club. All rights reserved.</p>
+            <p>
+              Contact us at:
+              <a
+                href="mailto:mtsac.csclub@gmail.com"
+                className="hover:text-blue-700 ml-1 hover:underline"
+              >
+                mtsac.csclub@gmail.com
+              </a>
+            </p>
+          </div>
           <div className="flex space-x-4">
             <a href="https://github.com/mtsac-cs" className="hover:text-white">
               <GithubIcon className="w-4 h-4" />
             </a>
-            <a href="https://discord.com/invite/sWpjfHVuuT" className="hover:text-white">
+            <a
+              href="https://discord.com/invite/sWpjfHVuuT"
+              className="hover:text-white"
+            >
               <DiscordIcon className="w-4 h-4" />
             </a>
             <a
