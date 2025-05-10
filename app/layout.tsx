@@ -25,7 +25,7 @@ const garamond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mtsaccomputerscience.club'),
+  metadataBase: new URL('https://mtsaccs.org'),
   title: {
     template: "%s | Mt. SAC Computer Science Club",
     default: "Mt. SAC Computer Science Club - Student-Led Tech Community"
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mtsaccomputerscience.club",
+    url: "https://mtsaccs.org",
     siteName: "Mt. SAC Computer Science Club",
     title: "Mt. SAC Computer Science Club - Student-Led Tech Community",
     description: "Join Mt. SAC Computer Science Club! We're a vibrant community of student programmers, developers, and tech enthusiasts. Learn coding, join projects, attend workshops, and grow your tech career with us.",
@@ -108,7 +108,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="canonical" href="https://mtsaccomputerscience.club" />
+        <link rel="canonical" href="https://mtsaccs.org" />
         
         {/* Preload critical assets */}
         <link rel="preload" as="image" href="/static/header.jpeg" />
