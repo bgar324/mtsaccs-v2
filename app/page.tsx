@@ -1,11 +1,16 @@
 import React from "react";
-import Header from "./components/Header";
+import { Metadata } from "next";
 import Image from "next/image";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import EventCard from "./components/EventCard";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import Form from "./components/Form";
-import Footer from "./components/Footer";
+
+export const metadata: Metadata = {
+  title: "Home | Mt. SAC Computer Science Club",
+};
 
 const page = () => {
   const images = [

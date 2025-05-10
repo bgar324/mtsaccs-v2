@@ -1,19 +1,15 @@
 import React from "react";
+import { Metadata } from "next";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Image from "next/image";
-import { ChevronDown } from "lucide-react";
-import EventCard from "../components/EventCard";
+import Form from "../components/Form";
+import { ChevronDown, ArrowRight, Handshake, MessageCircleMore, Users, Rocket, Lightbulb, GraduationCap } from "lucide-react";
 import { DiscordIcon } from "../Icons";
-import {
-  ArrowRight,
-  Handshake,
-  MessageCircleMore,
-  Users,
-  Rocket,
-  Lightbulb,
-  GraduationCap,
-} from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Join Us",
+};
 import {
   Accordion,
   AccordionContent,

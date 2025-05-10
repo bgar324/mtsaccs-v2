@@ -1,11 +1,14 @@
-"use client";
-
 import React from "react";
 import { ChevronDown } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import EventCard from "../components/EventCard";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+
+export const metadata: Metadata = {
+  title: "Events",
+};
 
 type Event = {
   id: string;

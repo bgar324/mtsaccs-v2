@@ -1,15 +1,19 @@
 import React from "react";
+import { Metadata } from "next";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Image from "next/image";
 import { ChevronDown } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 const page = () => {
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
       <Header />
 
-      {/* Hero Section */}
       <div className="relative h-[60vh] w-full overflow-hidden">
         <Image
           src="/static/gallery/20250502_185939.jpg"

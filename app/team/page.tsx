@@ -1,10 +1,15 @@
 import React from "react";
+import { Metadata } from "next";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import OfficerCard from "../components/OfficerCard";
 import AdvisorCard from "../components/AdvisorCard";
+
+export const metadata: Metadata = {
+  title: "Team",
+};
 
 const page = () => {
   return (

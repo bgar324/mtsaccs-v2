@@ -1,9 +1,14 @@
 import React from "react";
+import { Metadata } from "next";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Image from "next/image";
-import { ChevronDown } from "lucide-react";
 import ProjectCard from "../components/ProjectCard";
+import { ChevronDown } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 const page = () => {
   return (
