@@ -90,6 +90,9 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex space-x-4">
+          <a href="https://v1.mtsaccs.org" className="hover:text-yellow-600">
+              v1
+            </a>
             <a href="https://github.com/mtsac-cs" className="hover:text-white">
               <GithubIcon className="w-4 h-4" />
             </a>
