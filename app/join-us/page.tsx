@@ -46,10 +46,10 @@ const page = () => {
           <ChevronDown size={32} className="animate-bounce" />
         </div>
       </div>
-      <section className="px-6 py-6 md:py-20 lg:px-32">
+      <section className="px-6 py-6 md:py-12 ">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {/* How Do I Join? */}
-          <div className="relative p-6 border rounded-xl shadow-sm bg-[#FBF5E8] transition group lg:col-span-1">
+          <div className="relative p-6 border rounded-xl shadow-sm bg-[#FBF5E8] transition group lg:col-span-1 h-min">
             <div className="absolute -top-3 -left-3 w-6 h-6 bg-[#edd7b4] rounded-full border-2 border-black transition-colors duration-300 ease-in-out group-hover:bg-[#98FB98]" />
             <h3 className="text-2xl font-semibold mb-2 font-garamond">
               How do I join?
