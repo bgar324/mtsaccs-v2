@@ -41,7 +41,7 @@ const page = () => {
             cheering us on behind the scenes.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 xl:px-36 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 xl:px-36 mx-auto">
           <AdvisorCard
             name="Dominick Atanasio"
             role="Professor"
@@ -80,7 +80,7 @@ const page = () => {
           </p>
         </div>
         <div className="flex flex-col gap-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 xl:px-36 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 xl:px-36 mx-auto">
             <OfficerCard
               name="Bowen Wu"
               role="President"
