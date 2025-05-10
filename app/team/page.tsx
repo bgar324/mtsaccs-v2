@@ -41,33 +41,31 @@ const page = () => {
             cheering us on behind the scenes.
           </p>
         </div>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col md:flex-row gap-10 justify-center">
-            <AdvisorCard
-              name="Dominick Atanasio"
-              role="Professor"
-              department = "Computer Science"
-              imageSrc="/static/advisors/AtanasioDominick.jpg"
-              email="datanasio@mtsac.edu"
-              linkedinUrl="https://www.mtsac.edu/profiles/datanasio.html"
-            />
-            <AdvisorCard
-              name="Jonathan Johannsen"
-              role="Professor"
-              department = "Computer Science"
-              imageSrc="/static/advisors/jonathan-johannsen-1567033401-square.jpg"
-              email="jjohannsen1@mtsac.edu"
-              linkedinUrl="https://www.mtsac.edu/profiles/jjohannsen1.html"
-            />
-            <AdvisorCard
-              name="Chun Wong"
-              role="Professor"
-              department = "Computer Science"
-              imageSrc="/static/advisors/WongChun.png"
-              email="cwong176@mtsac.edu"
-              linkedinUrl="https://www.mtsac.edu/profiles/cwong176.html"
-            />
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 xl:px-36 mx-auto">
+          <AdvisorCard
+            name="Dominick Atanasio"
+            role="Professor"
+            department="Computer Science"
+            imageSrc="/static/advisors/AtanasioDominick.jpg"
+            email="datanasio@mtsac.edu"
+            linkedinUrl="https://www.mtsac.edu/profiles/datanasio.html"
+          />
+          <AdvisorCard
+            name="Jonathan Johannsen"
+            role="Professor"
+            department="Computer Science"
+            imageSrc="/static/advisors/jonathan-johannsen-1567033401-square.jpg"
+            email="jjohannsen1@mtsac.edu"
+            linkedinUrl="https://www.mtsac.edu/profiles/jjohannsen1.html"
+          />
+          <AdvisorCard
+            name="Chun Wong"
+            role="Professor"
+            department="Computer Science"
+            imageSrc="/static/advisors/WongChun.png"
+            email="cwong176@mtsac.edu"
+            linkedinUrl="https://www.mtsac.edu/profiles/cwong176.html"
+          />
         </div>
       </section>
       <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]">
@@ -82,8 +80,7 @@ const page = () => {
           </p>
         </div>
         <div className="flex flex-col gap-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
-    
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 xl:px-36 mx-auto">
             <OfficerCard
               name="Bowen Wu"
               role="President"
@@ -105,9 +102,6 @@ const page = () => {
               discordUsername="jessica"
               linkedinUrl="https://www.linkedin.com/in/jessica-c-47b77332b/"
             />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
-    
             <OfficerCard
               name="Van Lai Sy"
               role="Treasurer"
@@ -129,9 +123,6 @@ const page = () => {
               discordUsername="ben"
               linkedinUrl="https://www.linkedin.com/in/btgarcia05/"
             />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
-    
             <OfficerCard
               name="Natalie Guillen"
               role="Workshop Officer"

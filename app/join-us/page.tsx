@@ -80,7 +80,7 @@ const page = () => {
             <h3 className="text-2xl font-semibold mb-2 font-garamond">
               What's in it for me?
             </h3>
-            <div className="flex flex-col md:flex-row text-center gap-4">
+            <div className="grid grid-cols-2 xl:grid-cols-4 text-center gap-4">
               <div className="border rounded-lg p-4 flex flex-col items-center bg-gray-50">
                 <Handshake />
                 <h4 className="font-semibold">Connect</h4>
@@ -163,7 +163,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full bg-[#edd7b4] px-6 py-6 md:py-20 lg:px-32 flex flex-col">
+      <section className="w-full bg-[#edd7b4] p-6 md:p-12 flex flex-col">
         <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl mb-3 md:mb-12">
           Frequently Asked Questions
         </h1>

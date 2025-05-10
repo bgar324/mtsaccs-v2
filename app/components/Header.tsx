@@ -8,7 +8,7 @@ import { Menu } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-transparent px-3 md:px-0">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-transparent px-3">
       <div className="mx-auto max-w-6xl bg-[#f8ecd4]/90 backdrop-blur-md border border-gray-300 rounded-xl shadow-lg py-2 px-4 flex items-center justify-between mt-2">
         {/* Content here */}
         <a href="/" className="cursor-pointer">

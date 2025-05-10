@@ -32,7 +32,7 @@ const page = () => {
 
       <section className="w-full p-6 md:p-12 flex flex-col">
         <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">Intro Workshops</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center px-6 lg:px-14 xl:px-36">
           <ProjectCard
             title="Intro to Arduino"
             date="11/20/19"
@@ -68,7 +68,7 @@ const page = () => {
 
       <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]">
         <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">Hackathons</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 place-items-center px-6 lg:px-14 xl:px-36">
           <ProjectCard
             title="Citrus Hack 2019"
             date="Fall 2019"
@@ -86,7 +86,7 @@ const page = () => {
 
       <section className="w-full p-6 md:p-12 flex flex-col">
         <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">Informational Meetings</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center md:px-12 lg:px-14 xl:px-36">
           <ProjectCard
             title="Resume Workshop"
             date="5/1/2019"

@@ -50,7 +50,7 @@ const EventCard: React.FC<EventCardProps> = ({
             <p className="text-xs md:text-sm uppercase">{month}</p>
             <p className="text-2xl md:text-4xl font-medium">{day}</p>
           </div>
-          <div className="flex flex-col justify-center text-sm text-gray-600 space-y-1">
+          <div className="flex flex-col justify-center text-sm text-gray-6=700 space-y-1">
             <div className="flex items-center">
               <MapPin className="w-4 h-4 mr-2" />
               <span>{location}</span>

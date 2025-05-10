@@ -18,7 +18,9 @@ const OfficerCard: React.FC<OfficerCardProps> = ({
   linkedinUrl,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start gap-4 p-4 rounded-xl shadow-sm border bg-[#FBF5E8] w-full max-w-md">
+    <div
+      className="flex items-center md:items-start gap-4 p-4 rounded-xl shadow-sm border bg-[#FBF5E8] w-full max-w-md overflow-hidden"
+    >
       <div className="w-24 h-24 relative flex-shrink-0">
         <Image
           src={imageSrc}
@@ -27,7 +29,7 @@ const OfficerCard: React.FC<OfficerCardProps> = ({
           className="rounded-full object-cover"
         />
       </div>
-      <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1 mt-2">
+      <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1 mt-2 break-all">
         <a
           href={linkedinUrl}
           target="_blank"

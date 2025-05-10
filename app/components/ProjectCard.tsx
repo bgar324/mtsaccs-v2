@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   slidesLink,
 }) => {
   return (
-    <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl mx-auto rounded-xl overflow-hidden shadow-md bg-[#FBF5E8] border border-gray-200 transition">
+    <div className="w-full mx-auto rounded-xl overflow-hidden shadow-md bg-[#FBF5E8] border border-gray-200 transition">
       <div className="pt-2 px-2">
         <div className="relative w-full h-36 sm:h-44 md:h-48">
           <Image
