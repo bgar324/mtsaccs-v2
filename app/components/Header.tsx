@@ -69,7 +69,7 @@ const Header = () => {
                   Mobile navigation menu
                 </DialogTitle>
                 {/* CS Seal Image */}
-                <div className="w-full flex justify-center py-8 bg-transparent">
+                <a className="w-full flex justify-center py-8 bg-transparent" href = "/">
                   <Image
                     src="/static/gray_cs_seal.png"
                     alt="CS Club Seal"
@@ -77,7 +77,7 @@ const Header = () => {
                     height={200}
                     className="object-contain"
                   />
-                </div>
+                </a>
 
                 {/* Navigation Grid */}
                 <div className="grid grid-cols-2 gap-4 w-full flex-grow p-4">
