@@ -154,7 +154,7 @@ const page = () => {
         <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
           Upcoming Events
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-12 xl:px-36">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-12 lg:px-14 xl:px-36">
           {upcomingEvents.map((event) => (
             <EventCard
               key={event.id}
@@ -174,7 +174,7 @@ const page = () => {
         <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
           Past Events
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-12 xl:px-36">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-12 lg:px-14 xl:px-36">
           {pastEvents.map((event) => (
             <EventCard
               key={event.id}
