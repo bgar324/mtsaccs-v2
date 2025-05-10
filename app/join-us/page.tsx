@@ -3,12 +3,23 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Form from "../components/Form";
-import { ChevronDown, ArrowRight, Handshake, MessageCircleMore, Users, Rocket, Lightbulb, GraduationCap } from "lucide-react";
+import { ChevronDown, ArrowRight, Handshake, MessageCircleMore, Users, Rocket } from "lucide-react";
 import { DiscordIcon } from "../Icons";
 
 export const metadata: Metadata = {
-  title: "Join Us",
+  title: "Join Us | Mt. SAC Computer Science Club",
+  description: "Join Mt. SAC's Computer Science Club - a welcoming community for all skill levels. No fees, no experience needed. Connect, learn, and grow with fellow tech enthusiasts.",
+  keywords: "join CS club, Mt. SAC Computer Science Club, student organization, tech community, programming club, coding club, Mt. San Antonio College",
+  openGraph: {
+    title: "Join Mt. SAC Computer Science Club",
+    description: "Whether you're coding your first line or leading a project, you belong here. Join our inclusive tech community today!",
+    images: [{
+      url: "/static/gallery/IMG_8061.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Mt. SAC Computer Science Club members collaborating"
+    }]
+  }
 };
 import {
   Accordion,
@@ -19,12 +30,12 @@ import {
 
 const page = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <main className="min-h-screen w-full overflow-x-hidden" aria-label="Join the Computer Science Club">
       <Header />
       <div className="relative h-[60vh] w-full overflow-hidden">
         <Image
           src="/static/gallery/IMG_8061.jpg"
-          alt="Header"
+          alt="Mt. SAC Computer Science Club members working together" priority
           fill
           className="object-cover object-[center_60%] brightness-75"
         />
@@ -39,13 +50,13 @@ const page = () => {
           </p>
         </div>
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in">
-          <ChevronDown size={32} className="animate-bounce" />
+          <ChevronDown size={32} className="animate-bounce" aria-hidden="true" />
         </div>
       </div>
-      <section className="px-6 py-6 md:py-12 ">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <section className="px-6 py-6 md:py-12" aria-labelledby="join-benefits">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-6xl mx-auto" role="list">
           {/* How Do I Join? */}
-          <div className="relative p-6 border rounded-xl shadow-sm bg-[#FBF5E8] transition group lg:col-span-1 h-min">
+          <div className="relative p-6 border rounded-xl shadow-sm bg-[#FBF5E8] transition group lg:col-span-1 h-min" role="listitem">
             <div className="absolute -top-3 -left-3 w-6 h-6 bg-[#edd7b4] rounded-full border-2 border-black transition-colors duration-300 ease-in-out group-hover:bg-[#98FB98]" />
             <h3 className="text-2xl font-semibold mb-2 font-garamond">
               How do I join?
@@ -64,24 +75,24 @@ const page = () => {
                 <DiscordIcon
                   width={16}
                   height={16}
-                  className="fill-white transition-colors duration-300 ease-in-out"
+                  className="fill-white transition-colors duration-300 ease-in-out" aria-hidden="true"
                 />
                 Join Discord
-                <ArrowRight size={16} />
+                <ArrowRight size={16} aria-hidden="true" />
               </a>
             </div>
           </div>
 
           {/* What's In It For Me? */}
-          <div className="relative p-6 border rounded-xl shadow-sm bg-[#FBF5E8] transition group lg:col-span-3">
+          <div className="relative p-6 border rounded-xl shadow-sm bg-[#FBF5E8] transition group lg:col-span-3" role="listitem">
             <div className="absolute -top-3 -left-3 w-6 h-6 bg-[#edd7b4] rounded-full border-2 border-black transition-colors duration-300 ease-in-out group-hover:bg-[#98FB98]" />
             <h3 className="text-2xl font-semibold mb-2 font-garamond">
               What's in it for me?
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-gray-50">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4" role="list" aria-label="Membership benefits">
+              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-gray-50" role="listitem">
                 <div className="flex-shrink-0 sm:mb-2">
-                  <Handshake className="w-6 h-6 sm:w-5 sm:h-5" />
+                  <Handshake className="w-6 h-6 sm:w-5 sm:h-5" aria-hidden="true" />
                 </div>
                 <div className="ml-4 sm:ml-0 flex flex-col sm:items-center">
                   <h4 className="font-semibold text-left sm:text-center">Connect</h4>
@@ -91,9 +102,9 @@ const page = () => {
                   </p>
                 </div>
               </div>
-              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-gray-50">
+              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-gray-50" role="listitem">
                 <div className="flex-shrink-0 sm:mb-2">
-                  <MessageCircleMore className="w-6 h-6 sm:w-5 sm:h-5" />
+                  <MessageCircleMore className="w-6 h-6 sm:w-5 sm:h-5" aria-hidden="true" />
                 </div>
                 <div className="ml-4 sm:ml-0 flex flex-col sm:items-center">
                   <h4 className="font-semibold text-left sm:text-center">Tutoring</h4>
@@ -103,9 +114,9 @@ const page = () => {
                   </p>
                 </div>
               </div>
-              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-gray-50">
+              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-gray-50" role="listitem">
                 <div className="flex-shrink-0 sm:mb-2">
-                  <Users className="w-6 h-6 sm:w-5 sm:h-5" />
+                  <Users className="w-6 h-6 sm:w-5 sm:h-5" aria-hidden="true" />
                 </div>
                 <div className="ml-4 sm:ml-0 flex flex-col sm:items-center">
                   <h4 className="font-semibold text-left sm:text-center">Collaborate</h4>
@@ -117,7 +128,7 @@ const page = () => {
               </div>
               <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-white">
                 <div className="flex-shrink-0 sm:mb-2">
-                  <Rocket className="w-6 h-6 sm:w-5 sm:h-5" />
+                  <Rocket className="w-6 h-6 sm:w-5 sm:h-5" aria-hidden="true" />
                 </div>
                 <div className="ml-4 sm:ml-0 flex flex-col sm:items-center">
                   <h4 className="font-semibold text-left sm:text-center">Participate</h4>
@@ -141,7 +152,7 @@ const page = () => {
             Take ownership. Officers plan events, lead builds, and shape what
             happens next.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="Leadership positions">
             {[
               [
                 "President",
@@ -169,7 +180,7 @@ const page = () => {
                 "Plans, promotes, and coordinates educational workshops.",
               ],
             ].map(([role, desc]) => (
-              <div key={role} className="border rounded-lg p-4 bg-gray-50">
+              <div key={role} className="border rounded-lg p-4 bg-gray-50" role="listitem">
                 <h4 className="font-semibold">{role}</h4>
                 <p className="text-sm text-gray-600">{desc}</p>
               </div>
@@ -177,10 +188,11 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full bg-[#edd7b4] p-6 md:p-12 flex flex-col">
-        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl mb-3 md:mb-12">
+      <section className="w-full p-6 md:p-12 bg-[#edd7b4]" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" className="sr-only">Frequently Asked Questions</h2>
+        <h2 className="text-start font-garamond font-thin text-3xl md:text-5xl mb-3 md:mb-12">
           Frequently Asked Questions
-        </h1>
+        </h2>
         <Accordion
           type="single"
           collapsible
@@ -265,7 +277,7 @@ const page = () => {
         </Accordion>
       </section>
       <Footer />
-    </div>
+    </main>
   );
 };
 

@@ -2,6 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { DiscordIcon } from "../Icons";
 
+/**
+ * OfficerCard component displays information about a student officer including their name, role, and social links.
+ * @param name - The officer's full name
+ * @param role - The officer's role in the club (e.g., President)
+ * @param imageSrc - Path to the officer's profile image
+ * @param discordUsername - Officer's Discord username for contact
+ * @param linkedinUrl - URL to the officer's LinkedIn profile
+ */
 interface OfficerCardProps {
   name: string;
   role: string;
@@ -18,10 +26,12 @@ const OfficerCard: React.FC<OfficerCardProps> = ({
   linkedinUrl,
 }) => {
   return (
-    <div
+    <article
+      role="listitem"
       className="flex items-center md:items-start gap-4 p-4 rounded-xl shadow-sm border bg-[#FBF5E8] w-full max-w-md overflow-hidden"
+      aria-labelledby={`officer-${name.toLowerCase().replace(/\s+/g, '-')}`}
     >
-      <div className="w-24 h-24 relative flex-shrink-0">
+      <div className="w-24 h-24 relative flex-shrink-0" aria-hidden="true">
         <Image
           src={imageSrc}
           alt={name}
@@ -34,7 +44,7 @@ const OfficerCard: React.FC<OfficerCardProps> = ({
           href={linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg font-semibold text-black hover:text-[#0A66C2] transition-colors"
+          className="text-lg font-semibold text-black hover:text-[#0A66C2] transition-colors" id={`officer-${name.toLowerCase().replace(/\s+/g, '-')}`}
         >
           <span className="hidden md:inline">{name}</span>
           <span className="md:hidden">
@@ -45,12 +55,12 @@ const OfficerCard: React.FC<OfficerCardProps> = ({
           </span>
         </a>
         <p className="text-xs md:text-sm text-gray-900">{role}</p>
-        <div className="flex items-center gap-2 text-gray-700 text-xs md:text-sm mt-1">
-          <DiscordIcon className="w-4 h-4 sm:w-5 sm:h-5 fill-[#738ADB]" />
+        <div className="flex items-center gap-2 text-gray-700 text-xs md:text-sm mt-1" aria-label={`Discord username: ${discordUsername}`}>
+          <DiscordIcon className="w-4 h-4 sm:w-5 sm:h-5 fill-[#738ADB]" aria-hidden="true" />
           <span>{discordUsername}</span>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

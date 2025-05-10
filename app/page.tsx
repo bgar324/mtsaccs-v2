@@ -9,7 +9,19 @@ import Marquee from "react-fast-marquee";
 import Form from "./components/Form";
 
 export const metadata: Metadata = {
-  title: "Home | Mt. SAC Computer Science Club",
+  title: "Mt. SAC Computer Science Club",
+  description: "Join Mt. SAC's Computer Science Club - a student-led community fostering hands-on learning, coding workshops, and tech events. Open to all skill levels, no experience needed.",
+  keywords: "Mt. SAC CS Club, computer science club, coding community, programming workshops, tech events, student organization, Mt. San Antonio College",
+  openGraph: {
+    title: "Mt. SAC Computer Science Club - Student-Led Tech Community",
+    description: "Connect with fellow coders, learn through hands-on workshops, and build real projects. Join our inclusive tech community today!",
+    images: [{
+      url: "/static/header.jpeg",
+      width: 1920,
+      height: 1080,
+      alt: "Mt. SAC Computer Science Club members collaborating"
+    }]
+  }
 };
 
 const page = () => {
@@ -25,14 +37,14 @@ const page = () => {
     "/static/gallery/csclub-clubday.jpg",
   ];
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <main className="min-h-screen w-full overflow-x-hidden" aria-label="Mt. SAC Computer Science Club Home">
       <Header />
       <div className="flex flex-col mx-auto">
         {/* this div */}
         <div className="relative h-[90vh] md:h-[98vh] w-full overflow-hidden">
           <Image
             src="/static/header.jpeg"
-            alt="Hero"
+            alt="Mt. SAC Computer Science Club members working together" aria-label="Welcome to Mt. SAC Computer Science Club"
             priority
             width={1920}
             height={1080}
@@ -49,12 +61,12 @@ const page = () => {
             </p>
           </div>
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in">
-            <ChevronDown size={32} className="animate-bounce" />
+            <ChevronDown size={32} className="animate-bounce" aria-hidden="true" />
           </div>
         </div>
-        <section className="mx-auto p-6 md:p-12">
+        <section className="mx-auto p-6 md:p-12" aria-labelledby="about-heading">
           <div className="w-full flex items-center">
-            <h1 className="font-garamond font-thin text-3xl md:text-5xl">About Us</h1>
+            <h2 id="about-heading" className="font-garamond font-thin text-3xl md:text-5xl">About Us</h2>
           </div>
           <div className="flex flex-col lg:flex-row gap-12 my-4 px-2">
             <div className="flex-shrink-0 lg:flex-col w-[250px] mx-auto lg:mx-0 md:w-[350px]">
@@ -62,7 +74,7 @@ const page = () => {
                 src="/static/cs_seal.png"
                 width={350}
                 height={350}
-                alt="CS Club Duck"
+                alt="Mt. SAC Computer Science Club Logo" aria-hidden="true"
               />
               <div className="font-garamond flex-col gap-4">
                 <p className="text-lg md:text-xl italic text-neutral-900 leading-relaxed tracking-normal max-w-md mx-auto">
@@ -266,7 +278,7 @@ const page = () => {
                 >
                   <Image
                     src={partner.src}
-                    alt={`Partner logo ${i + 1}`}
+                    alt={partner.src.split('/').pop()?.replace(/\.[^/.]+$/, '').replace(/-/g, ' ') || `Partner logo ${i + 1}`}
                     className="rounded-3xl shadow-sm object-contain bg-[#f8ecd4] hover:bg-[#edd7b4] p-4 h-[100px] md:h-[120px] w-[150px] md:w-[200px] duration-300 ease-in-out transition"
                     width={200}
                     height={120}
@@ -278,9 +290,9 @@ const page = () => {
         </section>
         <section className="w-full py-6 md:py-12 overflow-hidden flex flex-col gap-6">
           <div className="px-6 md:px-12 flex flex-col gap-4">
-            <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
+            <h2 id="get-involved-heading" className="text-start font-garamond font-thin text-3xl md:text-5xl">
               Get Involved
-            </h1>
+            </h2>
             <div className="w-full flex flex-col md:flex-row gap-4 px-2 my-4">
               <div className="md:w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4">
                 <h3 className="font-garamond text-3xl font-strong mb-4">
@@ -319,7 +331,7 @@ const page = () => {
         </section>
         <Footer />
       </div>
-    </div>
+    </main>
   );
 };
 

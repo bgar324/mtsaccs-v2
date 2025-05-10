@@ -2,6 +2,15 @@ import React from "react";
 import Image from "next/image";
 import { Mail } from "lucide-react";
 
+/**
+ * AdvisorCard component displays information about a faculty advisor including their name, role, department, and contact details.
+ * @param name - The advisor's full name
+ * @param role - The advisor's role (e.g., Professor)
+ * @param department - Optional department name
+ * @param imageSrc - Path to the advisor's profile image
+ * @param email - Mt. SAC email username (without @mtsac.edu)
+ * @param linkedinUrl - URL to the advisor's Mt. SAC profile or LinkedIn
+ */
 interface AdvisorCardProps {
   name: string;
   role: string;
@@ -20,7 +29,8 @@ const AdvisorCard: React.FC<AdvisorCardProps> = ({
   linkedinUrl,
 }) => {
   return (
-    <div
+    <article
+      role="listitem"
       className="
         flex flex-row
         items-start
@@ -30,8 +40,9 @@ const AdvisorCard: React.FC<AdvisorCardProps> = ({
         min-w-0
         overflow-hidden
       "
+      aria-labelledby={`advisor-${name.toLowerCase().replace(/\s+/g, '-')}`}
     >
-      <div className="w-16 sm:w-24 h-16 sm:h-24 relative flex-shrink-0">
+      <div className="w-16 sm:w-24 h-16 sm:h-24 relative flex-shrink-0" aria-hidden="true">
         <Image
           src={imageSrc}
           alt={name}
@@ -54,7 +65,7 @@ const AdvisorCard: React.FC<AdvisorCardProps> = ({
           href={linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg font-semibold text-black hover:text-[#a01c2c] transition-colors"
+          className="text-lg font-semibold text-black hover:text-[#a01c2c] transition-colors" id={`advisor-${name.toLowerCase().replace(/\s+/g, '-')}`}
         >
           <span className="hidden sm:inline">{name}</span>
           <span className="sm:hidden">
@@ -70,13 +81,13 @@ const AdvisorCard: React.FC<AdvisorCardProps> = ({
         </p>
         <a
           href={`mailto:${email}@mtsac.edu`}
-           className="flex items-center gap-2 text-gray-700 hover:underline text-xs sm:text-sm mt-1 break-all"
+           className="flex items-center gap-2 text-gray-700 hover:underline text-xs sm:text-sm mt-1 break-all" aria-label={`Email ${name} at ${email}@mtsac.edu`}
         >
-          <Mail className="w-4 h-4" />
+          <Mail className="w-4 h-4" aria-hidden="true" />
           <span>{email}</span>
         </a>
       </div>
-    </div>
+    </article>
   );
 };
 

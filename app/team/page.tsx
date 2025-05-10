@@ -8,17 +8,29 @@ import OfficerCard from "../components/OfficerCard";
 import AdvisorCard from "../components/AdvisorCard";
 
 export const metadata: Metadata = {
-  title: "Team",
+  title: "Our Team | Mt. SAC Computer Science Club",
+  description: "Meet the dedicated faculty advisors and student officers leading Mt. SAC's Computer Science Club. Connect with our community of tech enthusiasts and educators.",
+  keywords: "Mt. SAC CS Club team, computer science faculty, student officers, tech mentors, CS club leadership, Mt. San Antonio College",
+  openGraph: {
+    title: "Meet Our Team - Mt. SAC Computer Science Club",
+    description: "Connect with our faculty advisors and student officers. Join a community that's passionate about computer science and technology.",
+    images: [{
+      url: "/static/team/team-header.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Mt. SAC Computer Science Club team members"
+    }]
+  }
 };
 
 const page = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <main className="min-h-screen w-full overflow-x-hidden" aria-label="Team Members and Leadership">
       <Header />
       <div className="relative h-[60vh] w-full overflow-hidden">
         <Image
           src="/static/team/team-header.jpg"
-          alt="Header"
+          alt="Mt. SAC Computer Science Club team members" priority
           fill
           className="object-cover object-[center_50%] brightness-75"
         />
@@ -33,14 +45,14 @@ const page = () => {
           </p>
         </div>
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in">
-          <ChevronDown size={32} className="animate-bounce" />
+          <ChevronDown size={32} className="animate-bounce" aria-hidden="true" />
         </div>
       </div>
-      <section className="w-full p-6 md:p-12 flex flex-col">
+      <section className="w-full p-6 md:p-12 flex flex-col" aria-labelledby="advisors-heading" role="region">
         <div className="flex flex-col gap-4">
-          <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
+          <h2 id="advisors-heading" className="text-start font-garamond font-thin text-3xl md:text-5xl">
             Our Advisors
-          </h1>
+          </h2>
           <p className="text-start text-gray-900 mb-10 max-w-2xl">
             Faculty mentors we’re lucky to have—always supporting, guiding, and
             cheering us on behind the scenes.
@@ -73,11 +85,11 @@ const page = () => {
           />
         </div>
       </section>
-      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]">
+      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]" aria-labelledby="officers-heading">
         <div className="flex flex-col gap-4">
-          <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
+          <h2 id="officers-heading" className="text-start font-garamond font-thin text-3xl md:text-5xl">
             Our Officers
-          </h1>
+          </h2>
           <p className="text-start text-gray-900 mb-10 max-w-2xl">
             Say hi to the folks running the show! From events to projects, they
             keep things moving—and they’re just a message away on Discord or
@@ -153,7 +165,7 @@ const page = () => {
         </div>
       </section>
       <Footer />
-    </div>
+    </main>
   );
 };
 

@@ -6,18 +6,30 @@ import Footer from "../components/Footer";
 import { ChevronDown } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About | Mt. SAC Computer Science Club",
+  description: "The Computer Science Club at Mt. San Antonio College is a student-powered hub for tech growth, learning, and community. Join our inclusive space for workshops, tutoring, and hands-on activities.",
+  keywords: "Mt. SAC CS Club, Computer Science Club, Mt. San Antonio College, programming club, coding workshops, tech community, student organization, computer science education",
+  openGraph: {
+    title: "About the Computer Science Club | Mt. SAC CS Club",
+    description: "Join Mt. SAC's premier tech community for hands-on learning, workshops, and networking opportunities in computer science.",
+    images: [{
+      url: "/static/gallery/20250502_185939.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Mt. SAC Computer Science Club members collaborating"
+    }]
+  }
 };
 
 const page = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <main className="min-h-screen w-full overflow-x-hidden" aria-label="About the Computer Science Club">
       <Header />
 
       <div className="relative h-[60vh] w-full overflow-hidden">
         <Image
           src="/static/gallery/20250502_185939.jpg"
-          alt="Header"
+          alt="Mt. SAC Computer Science Club members working together" priority
           fill
           className="object-cover object-[center_70%] brightness-75"
         />
@@ -40,10 +52,10 @@ const page = () => {
       </div>
 
       {/* Section 1: Our Origins */}
-      <section className="w-full py-6 md:py-12">
-        <h1 className="font-garamond font-thin text-3xl md:text-5xl mb-8 px-4 sm:px-8 md:px-12">
+      <section className="w-full py-6 md:py-12" aria-labelledby="mission-origins">
+        <h2 id="mission-origins" className="font-garamond font-thin text-3xl md:text-5xl mb-8 px-4 sm:px-8 md:px-12">
           Mission and Origins
-        </h1>
+        </h2>
         <div className="w-full px-6 md:px-12 lg:px-14 xl:px-36">
           <div className="flex flex-col gap-12 md:gap-20">
             <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16">
@@ -52,7 +64,7 @@ const page = () => {
                   src="/static/gallery/csclub-clubday.jpg"
                   width={500}
                   height={500}
-                  alt="CS Club Club Day"
+                  alt="Mt. SAC Computer Science Club members at Club Rush event"
                   className="rounded-xl w-full h-auto object-cover"
                 />
               </div>
@@ -112,7 +124,7 @@ const page = () => {
                   src="/static/about-us/IMG_5431.jpg"
                   width={500}
                   height={500}
-                  alt="CS Club Club Day"
+                  alt="Mt. SAC Computer Science Club members at Club Rush event"
                   className="rounded-xl w-full h-auto object-cover"
                 />
               </div>
@@ -122,10 +134,10 @@ const page = () => {
       </section>
 
       {/* Section 3: Where To Next */}
-      <section className="w-full p-4 sm:p-8 md:p-12 bg-[#edd7b4]">
-        <h1 className="font-garamond font-thin text-3xl md:text-5xl mb-8">
+      <section className="w-full p-4 sm:p-8 md:p-12 bg-[#edd7b4]" aria-labelledby="next-steps">
+        <h2 id="next-steps" className="font-garamond font-thin text-3xl md:text-5xl mb-8">
           Where to Next?
-        </h1>
+        </h2>
         <div className="w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:px-12 lg:px-14 xl:px-36">
             {[
@@ -172,7 +184,7 @@ const page = () => {
         </div>
       </section>
       <Footer />
-    </div>
+    </main>
   );
 };
 

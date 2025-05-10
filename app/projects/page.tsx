@@ -7,17 +7,29 @@ import ProjectCard from "../components/ProjectCard";
 import { ChevronDown } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Projects & Presentations | Mt. SAC Computer Science Club",
+  description: "Explore Mt. SAC CS Club's workshops, hackathons, and presentations. From Arduino to Web Development, discover our educational resources and project achievements.",
+  keywords: "Mt. SAC CS Club projects, computer science workshops, hackathons, tech presentations, Arduino tutorials, web development resources, programming education",
+  openGraph: {
+    title: "Projects & Presentations - Mt. SAC Computer Science Club",
+    description: "Discover our workshops, hackathons, and tech presentations. Join us in learning and building together.",
+    images: [{
+      url: "/static/projects-page/IMG_4518.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Mt. SAC Computer Science Club project showcase"
+    }]
+  }
 };
 
 const page = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <main className="min-h-screen w-full overflow-x-hidden" aria-label="Projects and Presentations">
       <Header />
       <div className="relative h-[60vh] w-full overflow-hidden">
         <Image
           src="/static/projects-page/IMG_4518.jpg"
-          alt="Header"
+          alt="Mt. SAC Computer Science Club project showcase" priority
           fill
           className="object-cover object-[center_50%] brightness-75"
         />
@@ -31,16 +43,16 @@ const page = () => {
             presented.
           </p>
         </div>
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in">
-          <ChevronDown size={32} className="animate-bounce" />
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-fade-in" aria-label="Scroll Down Indicator">
+          <ChevronDown size={32} className="animate-bounce" aria-hidden="true" />
         </div>
       </div>
 
-      <section className="w-full p-6 md:p-12 flex flex-col">
-        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
+      <section className="w-full p-6 md:p-12 flex flex-col" aria-labelledby="intro-workshops" role="region">
+        <h2 id="intro-workshops" className="text-start font-garamond font-thin text-3xl md:text-5xl">
           Intro Workshops
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center px-2">
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center px-2" role="list" aria-label="Introductory workshop presentations">
           <ProjectCard
             title="Intro to Arduino"
             date="11/20/19"
@@ -74,10 +86,10 @@ const page = () => {
         </div>
       </section>
 
-      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]">
-        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
+      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]" aria-labelledby="hackathons">
+        <h2 id="hackathons" className="text-start font-garamond font-thin text-3xl md:text-5xl">
           Hackathons
-        </h1>
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 place-items-center px-2">
           <ProjectCard
             title="Citrus Hack 2019"
@@ -95,10 +107,10 @@ const page = () => {
       </section>
 
       <section className="w-full p-6 md:p-12 flex flex-col">
-        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
+        <h2 id="info-meetings" className="text-start font-garamond font-thin text-3xl md:text-5xl">
           Informational Meetings
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center px-2">
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 place-items-center px-2" role="list" aria-label="Introductory workshop presentations">
           <ProjectCard
             title="Resume Workshop"
             date="5/1/2019"
@@ -133,7 +145,7 @@ const page = () => {
       </section>
 
       <Footer />
-    </div>
+    </main>
   );
 };
 

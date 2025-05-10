@@ -7,7 +7,19 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 export const metadata: Metadata = {
-  title: "Events",
+  title: "Events & Workshops | Mt. SAC Computer Science Club",
+  description: "Join Mt. SAC CS Club's workshops, tech talks, and community events. From circuit builds to speaker panels, we offer hands-on learning experiences for all skill levels.",
+  keywords: "Mt. SAC CS Club events, computer science workshops, tech talks, student events, STEM activities, hackathons, coding workshops, Mt. San Antonio College",
+  openGraph: {
+    title: "Events & Workshops | Mt. SAC Computer Science Club",
+    description: "Join our hands-on workshops, tech talks, and community events. No experience needed - just bring your curiosity!",
+    images: [{
+      url: "/static/gallery/IMG_5434.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Mt. SAC Computer Science Club event in action"
+    }]
+  }
 };
 
 type Event = {
@@ -130,12 +142,12 @@ const pastEvents = [
 
 const page = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <main className="min-h-screen w-full overflow-x-hidden" aria-label="Events and Workshops">
       <Header />
       <div className="relative h-[60vh] w-full overflow-hidden">
         <Image
           src="/static/gallery/IMG_5434.jpg"
-          alt="Header"
+          alt="Mt. SAC Computer Science Club members collaborating at an event" priority
           fill
           className="object-cover object-[center_40%] brightness-75"
         />
@@ -153,11 +165,11 @@ const page = () => {
           <ChevronDown size={32} className="animate-bounce" />
         </div>
       </div>
-      <section className="w-full p-6 md:p-12 flex flex-col">
-        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
+      <section className="w-full p-6 md:p-12 flex flex-col" aria-labelledby="upcoming-events">
+        <h2 id="upcoming-events" className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
           Upcoming Events
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2" role="list" aria-label="Event list">
           {upcomingEvents.map((event) => (
             <EventCard
               key={event.id}
@@ -173,11 +185,11 @@ const page = () => {
         </div>
       </section>
 
-      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]">
-        <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
+      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]" aria-labelledby="past-events">
+        <h2 id="past-events" className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
           Past Events
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2" role="list" aria-label="Event list">
           {pastEvents.map((event) => (
             <EventCard
               key={event.id}
@@ -194,7 +206,7 @@ const page = () => {
         </div>
       </section>
       <Footer />
-    </div>
+    </main>
   );
 };
 
