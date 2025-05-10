@@ -29,10 +29,10 @@ const page = () => {
       <Header />
       <div className="relative h-[60vh] w-full overflow-hidden">
         <Image
-          src="/static/team/team-header.jpg"
+          src="/static/team/team.jpg"
           alt="Mt. SAC Computer Science Club team members" priority
           fill
-          className="object-cover object-[center_50%] brightness-75"
+          className="object-cover object-[center_40%] brightness-75"
         />
         <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-[black]/80 to-transparent" />
         <div className="absolute bottom-16 md:bottom-12 left-6 md:left-12 right-6 md:right-12 z-10">
