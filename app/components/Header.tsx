@@ -21,31 +21,33 @@ const Header = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="items-center text-center flex-row justify-center gap-4 text-sm ml-20 hidden md:flex">
-          <a
-            className="hover:bg-gray-700/10 px-3 py-1 rouanded-full cursor-pointer transition duration-200 ease-in-out rounded-full"
-            href="/about"
-          >
-            About
-          </a>
-          <a
-            className="cursor-pointer hover:bg-gray-700/10 px-3 py-1 rounded-full transition duration-200 ease-in-out"
-            href="/events"
-          >
-            Events
-          </a>
-          <a
-            className="cursor-pointer hover:bg-gray-700/10 px-3 py-1 rounded-full transition duration-200 ease-in-out"
-            href="/team"
-          >
-            Team
-          </a>
-          <a
-            className="cursor-pointer hover:bg-gray-700/10 px-3 py-1 rounded-full transition duration-200 ease-in-out"
-            href="/projects"
-          >
-            Projects
-          </a>
+        <div className="hidden md:flex items-center justify-between w-full">
+          <div className="flex items-center space-x-4 mx-auto text-sm pl-20">
+            <a
+              className="cursor-pointer hover:bg-gray-700/10 px-3 py-1 rounded-full transition duration-200 ease-in-out"
+              href="/about"
+            >
+              About
+            </a>
+            <a
+              className="cursor-pointer hover:bg-gray-700/10 px-3 py-1 rounded-full transition duration-200 ease-in-out"
+              href="/events"
+            >
+              Events
+            </a>
+            <a
+              className="cursor-pointer hover:bg-gray-700/10 px-3 py-1 rounded-full transition duration-200 ease-in-out"
+              href="/team"
+            >
+              Team
+            </a>
+            <a
+              className="cursor-pointer hover:bg-gray-700/10 px-3 py-1 rounded-full transition duration-200 ease-in-out"
+              href="/projects"
+            >
+              Projects
+            </a>
+          </div>
           <a
             className="cursor-pointer rounded-full px-4 py-2 bg-[#edd7b4] hover:bg-[#f8ecd4] text-sm duration-200 ease-in-out transition"
             href="/join-us"
@@ -61,7 +63,7 @@ const Header = () => {
               <Menu className="h-6 w-6" />
             </SheetTrigger>
             <SheetContent
-              side="right"
+              side="top"
               className="w-full h-3/4 bg-[#f8ecd4] p-0 overflow-y-auto rounded-b-lg"
             >
               <div className="flex flex-col items-center w-full h-full">
@@ -80,28 +82,28 @@ const Header = () => {
                 </div>
 
                 {/* Navigation Grid */}
-                <div className="grid grid-cols-2 gap-4 w-full flex-grow">
+                <div className="grid grid-cols-2 gap-4 w-full flex-grow p-4">
                   <a
                     href="/about"
-                    className="text-lg rounded-xl transition duration-200 ease-in-out text-center flex items-center justify-center"
+                    className="text-lg rounded-xl transition duration-200 ease-in-out text-center flex items-center justify-center bg-[#edd7b4]/50"
                   >
                     About
                   </a>
                   <a
                     href="/events"
-                    className="text-lg rounded-xl transition duration-200 ease-in-out text-center flex items-center justify-center"
+                    className="text-lg rounded-xl transition duration-200 ease-in-out text-center flex items-center justify-center bg-[#edd7b4]/50"
                   >
                     Events
                   </a>
                   <a
                     href="/team"
-                    className="text-lg rounded-xl transition duration-200 ease-in-out text-center flex items-center justify-center"
+                    className="text-lg rounded-xl transition duration-200 ease-in-out text-center flex items-center justify-center bg-[#edd7b4]/50"
                   >
                     Team
                   </a>
                   <a
                     href="/projects"
-                    className="text-lg rounded-xl transition duration-200 ease-in-out text-center flex items-center justify-center"
+                    className="text-lg rounded-xl transition duration-200 ease-in-out text-center flex items-center justify-center bg-[#edd7b4]/50" 
                   >
                     Projects
                   </a>
