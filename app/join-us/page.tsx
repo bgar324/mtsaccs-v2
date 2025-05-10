@@ -11,6 +11,8 @@ import {
   MessageCircleMore,
   Users,
   Rocket,
+  Lightbulb,
+  GraduationCap,
 } from "lucide-react";
 import {
   Accordion,
@@ -80,38 +82,54 @@ const page = () => {
             <h3 className="text-2xl font-semibold mb-2 font-garamond">
               What's in it for me?
             </h3>
-            <div className="grid grid-cols-2 xl:grid-cols-4 text-center gap-4">
-              <div className="border rounded-lg p-4 flex flex-col items-center bg-gray-50">
-                <Handshake />
-                <h4 className="font-semibold">Connect</h4>
-                <p className="text-sm text-gray-600">
-                  with like-minded students who share your passion for Computer
-                  Science and Technology
-                </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-gray-50">
+                <div className="flex-shrink-0 sm:mb-2">
+                  <Handshake className="w-6 h-6 sm:w-5 sm:h-5" />
+                </div>
+                <div className="ml-4 sm:ml-0 flex flex-col sm:items-center">
+                  <h4 className="font-semibold text-left sm:text-center">Connect</h4>
+                  <p className="text-sm text-gray-600 text-left sm:text-center">
+                    with like-minded students who share your passion for Computer
+                    Science and Technology
+                  </p>
+                </div>
               </div>
-              <div className="border rounded-lg p-4 flex flex-col items-center bg-gray-50">
-                <MessageCircleMore />
-                <h4 className="font-semibold">Tutoring</h4>
-                <p className="text-sm text-gray-600">
-                  from our alumni and volunteers to help you succeed in your
-                  coursework and projects
-                </p>
+              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-gray-50">
+                <div className="flex-shrink-0 sm:mb-2">
+                  <MessageCircleMore className="w-6 h-6 sm:w-5 sm:h-5" />
+                </div>
+                <div className="ml-4 sm:ml-0 flex flex-col sm:items-center">
+                  <h4 className="font-semibold text-left sm:text-center">Tutoring</h4>
+                  <p className="text-sm text-gray-600 text-left sm:text-center">
+                    from our alumni and volunteers to help you succeed in your
+                    coursework and projects
+                  </p>
+                </div>
               </div>
-              <div className="border rounded-lg p-4 flex flex-col items-center bg-gray-50">
-                <Users />
-                <h4 className="font-semibold">Collaborate</h4>
-                <p className="text-sm text-gray-600">
-                  with your peers in coding opportunities where you can work on
-                  exciting projects with fellow members
-                </p>
+              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-gray-50">
+                <div className="flex-shrink-0 sm:mb-2">
+                  <Users className="w-6 h-6 sm:w-5 sm:h-5" />
+                </div>
+                <div className="ml-4 sm:ml-0 flex flex-col sm:items-center">
+                  <h4 className="font-semibold text-left sm:text-center">Collaborate</h4>
+                  <p className="text-sm text-gray-600 text-left sm:text-center">
+                    with your peers in coding opportunities where you can work on
+                    exciting projects with fellow members
+                  </p>
+                </div>
               </div>
-              <div className="border rounded-lg p-4 flex flex-col items-center bg-white">
-                <Rocket />
-                <h4 className="font-semibold">Participate</h4>
-                <p className="text-sm text-gray-600">
-                  in workshops and events designed to sharpen your skills and
-                  showcase new technologies
-                </p>
+              <div className="border rounded-lg p-4 flex flex-row sm:flex-col items-center bg-white">
+                <div className="flex-shrink-0 sm:mb-2">
+                  <Rocket className="w-6 h-6 sm:w-5 sm:h-5" />
+                </div>
+                <div className="ml-4 sm:ml-0 flex flex-col sm:items-center">
+                  <h4 className="font-semibold text-left sm:text-center">Participate</h4>
+                  <p className="text-sm text-gray-600 text-left sm:text-center">
+                    in workshops and events designed to sharpen your skills and
+                    showcase new technologies
+                  </p>
+                </div>
               </div>
             </div>
           </div>
