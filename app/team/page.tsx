@@ -47,7 +47,7 @@ const page = () => {
             role="Professor"
             department="Computer Science"
             imageSrc="/static/advisors/AtanasioDominick.jpg"
-            email="datanasio@mtsac.edu"
+            email="datanasio"
             linkedinUrl="https://www.mtsac.edu/profiles/datanasio.html"
           />
           <AdvisorCard
@@ -55,7 +55,7 @@ const page = () => {
             role="Professor"
             department="Computer Science"
             imageSrc="/static/advisors/jonathan-johannsen-1567033401-square.jpg"
-            email="jjohannsen1@mtsac.edu"
+            email="jjohannsen1"
             linkedinUrl="https://www.mtsac.edu/profiles/jjohannsen1.html"
           />
           <AdvisorCard
@@ -63,7 +63,7 @@ const page = () => {
             role="Professor"
             department="Computer Science"
             imageSrc="/static/advisors/WongChun.png"
-            email="cwong176@mtsac.edu"
+            email="cwong176"
             linkedinUrl="https://www.mtsac.edu/profiles/cwong176.html"
           />
         </div>

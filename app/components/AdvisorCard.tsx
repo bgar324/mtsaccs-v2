@@ -56,15 +56,21 @@ const AdvisorCard: React.FC<AdvisorCardProps> = ({
           rel="noopener noreferrer"
           className="text-lg font-semibold text-black hover:text-[#a01c2c] transition-colors"
         >
-          {name}
+          <span className="hidden sm:inline">{name}</span>
+          <span className="sm:hidden">
+            {name.split(' ').length > 1
+              ? `${name.split(' ')[0]} ${name.split(' ').pop()?.[0]}.`
+              : name
+            }
+          </span>
         </a>
-        <p className="text-sm text-gray-900">
+        <p className="text-xs sm:text-sm text-gray-900">
           {role}
           {department ? ` — ${department}` : ""}
         </p>
         <a
-          href={`mailto:${email}`}
-           className="flex items-center gap-2 text-gray-800 hover:underline text-sm mt-1 break-all"
+          href={`mailto:${email}@mtsac.edu`}
+           className="flex items-center gap-2 text-gray-700 hover:underline text-xs sm:text-sm mt-1 break-all"
         >
           <Mail className="w-4 h-4" />
           <span>{email}</span>

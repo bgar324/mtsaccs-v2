@@ -29,18 +29,24 @@ const OfficerCard: React.FC<OfficerCardProps> = ({
           className="rounded-full object-cover"
         />
       </div>
-      <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1 mt-2 break-all">
+      <div className="flex flex-col items-start text-center md:text-left gap-1 mt-2 break-all">
         <a
           href={linkedinUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="text-lg font-semibold text-black hover:text-[#0A66C2] transition-colors"
         >
-          {name}
+          <span className="hidden sm:inline">{name}</span>
+          <span className="sm:hidden">
+            {name.split(' ').length > 1
+              ? `${name.split(' ')[0]} ${name.split(' ').pop()?.[0]}.`
+              : name
+            }
+          </span>
         </a>
-        <p className="text-sm text-gray-900">{role}</p>
-        <div className="flex items-center gap-2 text-gray-800 text-sm mt-1">
-          <DiscordIcon className="w-5 h-5 fill-[#738ADB]" />
+        <p className="text-xs sm:text-sm text-gray-900">{role}</p>
+        <div className="flex items-center gap-2 text-gray-700 text-xs sm:text-sm mt-1">
+          <DiscordIcon className="w-4 h-4 sm:w-5 sm:h-5 fill-[#738ADB]" />
           <span>{discordUsername}</span>
         </div>
       </div>
