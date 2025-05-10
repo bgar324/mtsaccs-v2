@@ -40,7 +40,7 @@ const page = () => {
         <h1 className="font-garamond font-thin text-3xl md:text-5xl mb-8 px-4 sm:px-8 md:px-12">
           Mission and Origins
         </h1>
-        <div className="w-full md:px-12 lg:px-14 xl:px-36">
+        <div className="w-full px-6 md:px-12 lg:px-14 xl:px-36">
           <div className="flex flex-col gap-12 md:gap-20">
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
               <div className="flex-shrink-0 w-full md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
