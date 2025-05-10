@@ -123,7 +123,7 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/static/gallery/IMG_5434.jpg" />
         <link rel="preload" as="image" href="/static/projects-page/IMG_4518.jpg" />
         <link rel="preload" as="image" href="/static/IMG_8061.jpg" />
-        <link rel="preload" as="image" href="/static/team/team-header.jpg" />
+        <link rel="preload" as="image" href="/static/team/team.jpg" />
       </head>
       <body
         className={`font-sans ${geistSans.variable} ${geistMono.variable} antialiased bg-[#f8ecd4]`}
