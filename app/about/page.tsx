@@ -42,8 +42,8 @@ const page = () => {
         </h1>
         <div className="w-full px-6 md:px-12 lg:px-14 xl:px-36">
           <div className="flex flex-col gap-12 md:gap-20">
-            <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
-              <div className="flex-shrink-0 w-full md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
+            <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16">
+              <div className="flex-shrink-0 w-full sm:w-[500px] mx-auto lg:mx-0">
                 <Image
                   src="/static/gallery/csclub-clubday.jpg"
                   width={500}
@@ -82,7 +82,7 @@ const page = () => {
               </div>
             </div>
             <div className="w-full h-px bg-gradient-to-r bg-neutral-500" />
-            <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-12 lg:gap-16">
+            <div className="flex flex-col-reverse lg:flex-row gap-8 md:gap-12 lg:gap-16">
               <div className="flex-1 flex flex-col mx-auto md:mx-0">
                 <h2 className="text-xl md:text-2xl font-medium mb-4">
                   Who is the Computer Science Club?
@@ -103,7 +103,7 @@ const page = () => {
                   connections that extend beyond the classroom.
                 </p>
               </div>
-              <div className="flex-shrink-0 w-full md:w-[400px] lg:w-[500px] mx-auto md:mx-0">
+              <div className="flex-shrink-0 w-full sm:w-[500px] mx-auto lg:mx-0">
                 <Image
                   src="/static/about-us/IMG_5431.jpg"
                   width={500}

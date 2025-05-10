@@ -51,7 +51,7 @@ const page = () => {
           <div className="w-full flex items-center">
             <h1 className="font-garamond font-thin text-3xl md:text-5xl">About Us</h1>
           </div>
-          <div className="flex flex-col lg:flex-row gap-12 my-4 md:px-12 lg:px-14 xl:px-36">
+          <div className="flex flex-col lg:flex-row gap-12 my-4 px-2">
             <div className="flex-shrink-0 lg:flex-col w-[250px] mx-auto lg:mx-0 md:w-[350px]">
               <Image
                 src="/static/cs_seal.png"
@@ -105,7 +105,7 @@ const page = () => {
           <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
             Upcoming Events
           </h1>
-          <div className="flex flex-col lg:flex-row gap-12 my-4 md:px-12 lg:px-14 xl:px-36">
+          <div className="flex flex-col lg:flex-row gap-12 my-4 px-2">
             <EventCard
               imageSrc="/static/events/cs ebcc event.png"
               title="Electric Bluetooth Circuit Car Event"
@@ -276,7 +276,7 @@ const page = () => {
             <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
               Get Involved
             </h1>
-            <div className="w-full flex flex-col md:flex-row gap-4 px-1 md:px-12 lg:px-14 xl:px-36 my-4">
+            <div className="w-full flex flex-col md:flex-row gap-4 px-2 my-4">
               <div className="md:w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4">
                 <h3 className="font-garamond text-3xl font-strong mb-4">
                   Important Forms
