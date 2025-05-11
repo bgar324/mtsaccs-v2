@@ -146,14 +146,23 @@ const page = () => {
           <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
             Upcoming Events
           </h1>
-          <div className="flex flex-col lg:flex-row gap-12 my-4 px-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2 my-4" role="list" aria-label="Event list">
             <EventCard
-              imageSrc="/static/events/cs ebcc event.png"
-              title="Electric Bluetooth Circuit Car Event"
-              description="Join us for a hands-on tech adventure — assemble and race your own Bluetooth car while diving into circuits, 3D design, and team challenges. It’s full speed ahead for fun, friends, and engineering flair!"
-              date="30 Apr."
-              location="Building 60, Rm. 1620 & 1628"
-              time="3:00 PM - 7:00 PM"
+              isTBA={true}
+              title="Electric Bluetooth Circuit Car Event - Day 2"
+              description="Get creative with 3D design as you craft and print your car's unique exterior shell. Turn your engineering vision into reality in this hands-on workshop!"
+              date="TBA TBA"
+              location="TBA"
+              time="TBA"
+              rsvpUrl="https://forms.gle/RRSre4LhTXs2kPH38"
+            />
+            <EventCard
+              isTBA={true}
+              title="Electric Bluetooth Circuit Car Event - Day 3"
+              description="Race day is here! Put your custom-built car to the ultimate test in our grand finale event. Compete head-to-head, show off your engineering skills, and celebrate everyone's amazing creations!"
+              date="TBA"
+              location="TBA"
+              time="TBA"
               rsvpUrl="https://forms.gle/RRSre4LhTXs2kPH38"
             />
             <EventCard

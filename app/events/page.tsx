@@ -35,15 +35,24 @@ type Event = {
 
 const upcomingEvents: Event[] = [
   {
-    id: "9",
-    imageSrc: "/static/events/cs ebcc event.png",
-    title: "EBCC-1 Event",
-    description:
-      "Join us for an exciting hands-on workshop building electrical bluetooth controlled cars!",
-    date: "Apr. 25",
-    time: "3:00 PM - 7:00 PM",
-    location: "Building 60, Room 1620 & 1628",
+    id: "11",
+    title: "Electric Bluetooth Circuit Car Event - Day 2",
+    description: "Get creative with 3D design as you craft and print your car's unique exterior shell. Turn your engineering vision into reality in this hands-on workshop!",
+    date: "TBA TBA",
+    time: "TBA",
+    location: "TBA",
     rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+    imageSrc: "/static/events/cs ebcc event.png"
+  },
+  {
+    id: "12",
+    title: "Electric Bluetooth Circuit Car Event - Day 3",
+    description: "Race day is here! Put your custom-built car to the ultimate test in our grand finale event. Compete head-to-head, show off your engineering skills, and celebrate everyone's amazing creations!",
+    date: "TBA",
+    time: "TBA", 
+    location: "TBA",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+    imageSrc: "/static/events/cs ebcc event.png"
   },
   {
     id: "5",
@@ -138,6 +147,16 @@ const pastEvents = [
     location: "Virtual",
     rsvpUrl: "https://lu.ma/vfidevu9",
   },
+  {
+    id: "10",
+    imageSrc: "/static/events/cs ebcc event.png",
+    title: "Electric Bluetooth Circuit Car Event - Day 1",
+    description: "Join us for a hands-on tech adventure — assemble and race your own Bluetooth car while diving into circuits, 3D design, and team challenges. It's full speed ahead for fun, friends, and engineering flair!",
+    date: "2 May.",
+    time: "3:00 PM - 7:00 PM",
+    location: "Building 60, Rm. 1620 & 1628",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+  },
 ];
 
 const page = () => {
@@ -180,6 +199,7 @@ const page = () => {
               time={event.time}
               location={event.location}
               rsvpUrl={event.rsvpUrl}
+              isTBA={event.date.includes("TBA")}
             />
           ))}
         </div>

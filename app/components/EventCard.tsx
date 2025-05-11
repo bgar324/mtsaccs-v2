@@ -4,7 +4,7 @@ import { MapPin, Clock } from "lucide-react";
 
 interface EventCardProps {
   /** URL of the event image */
-  imageSrc: string;
+  imageSrc?: string;
   /** Title of the event */
   title: string;
   /** Description of the event */
@@ -16,13 +16,15 @@ interface EventCardProps {
   /** Time when the event starts and ends */
   time: string;
   /** URL for RSVP registration */
-  rsvpUrl: string;
+  rsvpUrl?: string;
   /** Optional height for the image container */
   imageHeight?: string;
   /** Optional position adjustment for the image */
   imagePosition?: string;
   /** Whether this is a past event */
   isArchived?: boolean;
+  /** Whether the event image should be replaced with TBA */
+  isTBA?: boolean;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -36,6 +38,7 @@ const EventCard: React.FC<EventCardProps> = ({
   imageHeight,
   imagePosition,
   isArchived = false,
+  isTBA = false,
 }) => {
   const [day, ...monthArr] = date.split(" ");
   const month = monthArr.join(" ");
@@ -43,12 +46,22 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <article className="w-full bg-[#f8ecd4] rounded-lg overflow-hidden shadow-md flex flex-col" role="listitem" aria-labelledby={`event-${title.toLowerCase().replace(/\s+/g, '-')}`}>
       <div className={`hidden md:block relative w-full ${imageHeight || "h-72"}`}>
-        <Image
-          src={imageSrc}
-          alt={`${title} - ${description}`}
-          fill
-          className={`object-cover object-[center_5%] ${imagePosition || ""}`}
-        />
+        {isTBA ? (
+          <div className="w-full h-full flex items-center justify-center bg-gray-200">
+            <span className="text-2xl font-semibold text-gray-600">TBA</span>
+          </div>
+        ) : imageSrc ? (
+          <Image
+            src={imageSrc}
+            alt={`${title} - ${description}`}
+            fill
+            className={`object-cover object-[center_5%] ${imagePosition || ""}`}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gray-200">
+            <span className="text-lg text-gray-600">No image available</span>
+          </div>
+        )}
       </div>
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div className="mb-2">
@@ -77,6 +90,13 @@ const EventCard: React.FC<EventCardProps> = ({
             aria-label="This event has already taken place"
           >
             Event Ended
+          </div>
+        ) : isTBA ? (
+          <div 
+            className="py-2 border border-gray-400 rounded text-sm font-medium text-center text-gray-500 bg-gray-100 cursor-not-allowed"
+            aria-label="RSVP not yet available"
+          >
+            Check Back Soon!
           </div>
         ) : (
           <a
