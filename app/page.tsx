@@ -146,12 +146,16 @@ const page = () => {
           <h1 className="text-start font-garamond font-thin text-3xl md:text-5xl">
             Upcoming Events
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2 my-4" role="list" aria-label="Event list">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2 my-4"
+            role="list"
+            aria-label="Event list"
+          >
             <EventCard
               isTBA={true}
               title="Electric Bluetooth Circuit Car Event - Day 2"
               description="Get creative with 3D design as you craft and print your car's unique exterior shell. Turn your engineering vision into reality in this hands-on workshop!"
-              date="TBA TBA"
+              date="TBA"
               location="TBA"
               time="TBA"
               rsvpUrl="https://forms.gle/RRSre4LhTXs2kPH38"
@@ -238,7 +242,7 @@ const page = () => {
               Curious what we built? Explore the full project archive below.
             </p>
             <a
-              className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition"
+              className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-xs md:text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition"
               href="/projects"
             >
               see full project archive <ArrowRight className="w-4 h-4" />
@@ -345,16 +349,16 @@ const page = () => {
                   form below to help shape our club.
                 </p>
                 <div className="flex flex-col gap-4">
+                  <Form
+                    title="General Feedback Form"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeacERWRiAnTlXoFRgdWw6ObGU5aqV79HIT5Od5um5mQwm1vg/viewform"
+                  />
                   <div
                     className="py-2 border border-gray-400 rounded text-base font-medium text-center text-gray-500 bg-gray-100 cursor-not-allowed"
                     aria-label="Mt. SAC Computer Science Club Officer Interest Form. Coming soon."
                   >
                     Officer Interest Form (coming soon)!
                   </div>
-                  <Form
-                    title="General Feedback Form"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeacERWRiAnTlXoFRgdWw6ObGU5aqV79HIT5Od5um5mQwm1vg/viewform"
-                  />
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4 h-min">
