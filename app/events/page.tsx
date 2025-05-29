@@ -8,18 +8,23 @@ import Header from "../components/Header";
 
 export const metadata: Metadata = {
   title: "Events & Workshops | Mt. SAC Computer Science Club",
-  description: "Join Mt. SAC CS Club's workshops, tech talks, and community events. From circuit builds to speaker panels, we offer hands-on learning experiences for all skill levels.",
-  keywords: "Mt. SAC CS Club events, computer science workshops, tech talks, student events, STEM activities, hackathons, coding workshops, Mt. San Antonio College",
+  description:
+    "Join Mt. SAC CS Club's workshops, tech talks, and community events. From circuit builds to speaker panels, we offer hands-on learning experiences for all skill levels.",
+  keywords:
+    "Mt. SAC CS Club events, computer science workshops, tech talks, student events, STEM activities, hackathons, coding workshops, Mt. San Antonio College",
   openGraph: {
     title: "Events & Workshops | Mt. SAC Computer Science Club",
-    description: "Join our hands-on workshops, tech talks, and community events. No experience needed - just bring your curiosity!",
-    images: [{
-      url: "/static/gallery/IMG_5434.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Mt. SAC Computer Science Club event in action"
-    }]
-  }
+    description:
+      "Join our hands-on workshops, tech talks, and community events. No experience needed - just bring your curiosity!",
+    images: [
+      {
+        url: "/static/gallery/IMG_5434.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mt. SAC Computer Science Club event in action",
+      },
+    ],
+  },
 };
 
 type Event = {
@@ -35,24 +40,16 @@ type Event = {
 
 const upcomingEvents: Event[] = [
   {
-    id: "11",
-    title: "Electric Bluetooth Circuit Car Event - Day 2",
-    description: "Get creative with 3D design as you craft and print your car's unique exterior shell. Turn your engineering vision into reality in this hands-on workshop!",
-    date: "TBA",
-    time: "TBA",
-    location: "TBA",
-    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
-    imageSrc: "/static/events/cs ebcc event.png"
-  },
-  {
-    id: "12",
-    title: "Electric Bluetooth Circuit Car Event - Day 3",
-    description: "Race day is here! Put your custom-built car to the ultimate test in our grand finale event. Compete head-to-head, show off your engineering skills, and celebrate everyone's amazing creations!",
-    date: "TBA",
-    time: "TBA", 
-    location: "TBA",
-    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
-    imageSrc: "/static/events/cs ebcc event.png"
+    id: "13",
+    imageSrc: "/static/events/cs club matcha.png",
+    title: "Art & Chill",
+    description:
+      "Join Art and Chill for a relaxing bracelet-making session designed to help you de-stress. Sip on matcha while vibing to chill music and connecting with others. Create, relax, and recharge before finals!",
+    date: "29 May",
+    time: "12:00 PM - 2:00 PM",
+    location: "Building 61 Room 1420",
+    rsvpUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSd67bKoCbkhTt1AU5ppIKiNFcQchVrWrJmKhWMVQfJ8LP9pWw/viewform",
   },
   {
     id: "5",
@@ -62,8 +59,30 @@ const upcomingEvents: Event[] = [
       "Get involved in meaningful STEM projects that make a difference in our community.",
     date: "Spring Fall to",
     time: "-",
-    location: "Various Locations",
+    location: "Remote",
     rsvpUrl: "https://forms.gle/UwmMgbQhD57Zou386",
+  },
+  {
+    id: "11",
+    title: "Electric Bluetooth Circuit Car Event - Day 2",
+    description:
+      "Get creative with 3D design as you craft and print your car's unique exterior shell. Turn your engineering vision into reality in this hands-on workshop!",
+    date: "TBA",
+    time: "TBA",
+    location: "TBA",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+    imageSrc: "/static/events/cs ebcc event.png",
+  },
+  {
+    id: "12",
+    title: "Electric Bluetooth Circuit Car Event - Day 3",
+    description:
+      "Race day is here! Put your custom-built car to the ultimate test in our grand finale event. Compete head-to-head, show off your engineering skills, and celebrate everyone's amazing creations!",
+    date: "TBA",
+    time: "TBA",
+    location: "TBA",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+    imageSrc: "/static/events/cs ebcc event.png",
   },
 ];
 
@@ -97,7 +116,7 @@ const pastEvents = [
     description:
       "Join us for a fun night of gaming and networking with fellow CS enthusiasts!",
     date: "30 October",
-    time: "4:00 - 7:00 PM",
+    time: "4:00 PM - 7:00 PM",
     location: "Founders Hall",
     rsvpUrl: "https://example.com/register/hackathon",
   },
@@ -129,8 +148,7 @@ const pastEvents = [
     id: "7",
     imageSrc: "/static/events/mtysacuclav932.png",
     title: "UCLA + Break Through Tech AI Info Session",
-    description:
-      "Learn about UCLA's Break Through Tech AI Program.",
+    description: "Learn about UCLA's Break Through Tech AI Program.",
     date: "3 December",
     time: "4:30 PM - 6:00 PM",
     location: "Founders Hall",
@@ -151,7 +169,8 @@ const pastEvents = [
     id: "10",
     imageSrc: "/static/events/cs ebcc event.png",
     title: "Electric Bluetooth Circuit Car Event - Day 1",
-    description: "Construct your own Bluetooth car while learning about circuits and 3D design in this hands-on workshop!",
+    description:
+      "Construct your own Bluetooth car while learning about circuits and 3D design in this hands-on workshop!",
     date: "2 May",
     time: "3:00 PM - 7:00 PM",
     location: "Building 60, Rm. 1620 & 1628",
@@ -161,12 +180,16 @@ const pastEvents = [
 
 const page = () => {
   return (
-    <main className="min-h-screen w-full overflow-x-hidden" aria-label="Events and Workshops">
+    <main
+      className="min-h-screen w-full overflow-x-hidden"
+      aria-label="Events and Workshops"
+    >
       <Header />
       <div className="relative h-[60vh] w-full overflow-hidden">
         <Image
           src="/static/gallery/IMG_5434.jpg"
-          alt="Mt. SAC Computer Science Club members collaborating at an event" priority
+          alt="Mt. SAC Computer Science Club members collaborating at an event"
+          priority
           fill
           className="object-cover object-[center_40%] brightness-75"
         />
@@ -184,11 +207,21 @@ const page = () => {
           <ChevronDown size={32} className="animate-bounce" />
         </div>
       </div>
-      <section className="w-full p-6 md:p-12 flex flex-col" aria-labelledby="upcoming-events">
-        <h2 id="upcoming-events" className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
+      <section
+        className="w-full p-6 md:p-12 flex flex-col"
+        aria-labelledby="upcoming-events"
+      >
+        <h2
+          id="upcoming-events"
+          className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8"
+        >
           Upcoming Events
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2" role="list" aria-label="Event list">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
+          role="list"
+          aria-label="Event list"
+        >
           {upcomingEvents.map((event) => (
             <EventCard
               key={event.id}
@@ -205,11 +238,21 @@ const page = () => {
         </div>
       </section>
 
-      <section className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]" aria-labelledby="past-events">
-        <h2 id="past-events" className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8">
+      <section
+        className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]"
+        aria-labelledby="past-events"
+      >
+        <h2
+          id="past-events"
+          className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8"
+        >
           Past Events
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2" role="list" aria-label="Event list">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
+          role="list"
+          aria-label="Event list"
+        >
           {pastEvents.map((event) => (
             <EventCard
               key={event.id}
