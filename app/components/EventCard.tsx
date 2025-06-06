@@ -25,6 +25,7 @@ interface EventCardProps {
   isArchived?: boolean;
   /** Whether the event image should be replaced with TBA */
   isTBA?: boolean;
+  isInvitationOnly?: boolean;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -39,13 +40,20 @@ const EventCard: React.FC<EventCardProps> = ({
   imagePosition,
   isArchived = false,
   isTBA = false,
+  isInvitationOnly = false,
 }) => {
   const [day, ...monthArr] = date.split(" ");
   const month = monthArr.join(" ");
 
   return (
-    <article className="w-full bg-[#f8ecd4] rounded-lg overflow-hidden shadow-md flex flex-col" role="listitem" aria-labelledby={`event-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-      <div className={`hidden md:block relative w-full ${imageHeight || "h-72"}`}>
+    <article
+      className="w-full bg-[#f8ecd4] rounded-lg overflow-hidden shadow-md flex flex-col"
+      role="listitem"
+      aria-labelledby={`event-${title.toLowerCase().replace(/\s+/g, "-")}`}
+    >
+      <div
+        className={`hidden md:block relative w-full ${imageHeight || "h-72"}`}
+      >
         {isTBA ? (
           <div className="w-full h-full flex items-center justify-center bg-gray-200">
             <span className="text-2xl font-semibold text-gray-600">TBA</span>
@@ -65,7 +73,12 @@ const EventCard: React.FC<EventCardProps> = ({
       </div>
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div className="mb-2">
-          <h3 id={`event-${title.toLowerCase().replace(/\s+/g, '-')}`} className="text-base md:text-lg font-semibold mb-2">{title}</h3>
+          <h3
+            id={`event-${title.toLowerCase().replace(/\s+/g, "-")}`}
+            className="text-base md:text-lg font-semibold mb-2"
+          >
+            {title}
+          </h3>
           <p className="text-xs md:text-sm text-gray-800 mb-4">{description}</p>
         </div>
         <div className="flex items-center mb-4 justify-around">
@@ -85,18 +98,25 @@ const EventCard: React.FC<EventCardProps> = ({
           </div>
         </div>
         {isArchived ? (
-          <div 
+          <div
             className="py-2 border border-gray-400 rounded text-sm font-medium text-center text-gray-500 bg-gray-100 cursor-not-allowed"
             aria-label="This event has already taken place"
           >
             Event Ended
           </div>
         ) : isTBA ? (
-          <div 
+          <div
             className="py-2 border border-gray-400 rounded text-sm font-medium text-center text-gray-500 bg-gray-100 cursor-not-allowed"
             aria-label="RSVP not yet available"
           >
             Check Back Soon!
+          </div>
+        ) : isInvitationOnly ? (
+          <div
+            className="py-2 border border-gray-400 rounded text-sm font-medium text-center text-gray-500 bg-gray-100 cursor-not-allowed"
+            aria-label="This is an invitation-only event"
+          >
+            Invite Only
           </div>
         ) : (
           <a

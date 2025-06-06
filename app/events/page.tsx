@@ -40,18 +40,6 @@ type Event = {
 
 const upcomingEvents: Event[] = [
   {
-    id: "13",
-    imageSrc: "/static/events/cs club matcha.png",
-    title: "Art & Chill",
-    description:
-      "Join Art and Chill for a relaxing bracelet-making session designed to help you de-stress. Sip on matcha while vibing to chill music and connecting with others. Create, relax, and recharge before finals!",
-    date: "29 May",
-    time: "12:00 PM - 2:00 PM",
-    location: "Building 61 Room 1420",
-    rsvpUrl:
-      "https://docs.google.com/forms/d/e/1FAIpQLSd67bKoCbkhTt1AU5ppIKiNFcQchVrWrJmKhWMVQfJ8LP9pWw/viewform",
-  },
-  {
     id: "5",
     imageSrc: "/static/events/cs club stem flyer.png",
     title: "STEMForOthers Project Opportunity",
@@ -67,8 +55,8 @@ const upcomingEvents: Event[] = [
     title: "Electric Bluetooth Circuit Car Event - Day 2",
     description:
       "Get creative with 3D design as you craft and print your car's unique exterior shell. Turn your engineering vision into reality in this hands-on workshop!",
-    date: "TBA",
-    time: "TBA",
+    date: "6 June",
+    time: "2:00 PM - 3:30 PM",
     location: "TBA",
     rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
     imageSrc: "/static/events/cs ebcc event.png",
@@ -175,6 +163,18 @@ const pastEvents = [
     time: "3:00 PM - 7:00 PM",
     location: "Building 60, Rm. 1620 & 1628",
     rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+  },
+  {
+    id: "13",
+    imageSrc: "/static/events/cs club matcha.png",
+    title: "Art & Chill",
+    description:
+      "Join Art and Chill for a relaxing bracelet-making session designed to help you de-stress. Sip on matcha while vibing to chill music and connecting with others. Create, relax, and recharge before finals!",
+    date: "29 May",
+    time: "12:00 PM - 2:00 PM",
+    location: "Building 61 Room 1420",
+    rsvpUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSd67bKoCbkhTt1AU5ppIKiNFcQchVrWrJmKhWMVQfJ8LP9pWw/viewform",
   },
 ];
 

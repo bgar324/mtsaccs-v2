@@ -152,15 +152,6 @@ const page = () => {
             aria-label="Event list"
           >
             <EventCard
-              imageSrc="/static/events/cs club matcha.png"
-              title="Art & Chill"
-              description="Join us for a relaxing bracelet-making session designed to help you de-stress. Sip on matcha while vibing to chill music and connecting with others. Create, relax, and recharge before finals!"
-              date="29 May"
-              location="Building 61 Room 1420"
-              time="12:00 PM - 2:00 PM"
-              rsvpUrl="https://docs.google.com/forms/d/e/1FAIpQLSd67bKoCbkhTt1AU5ppIKiNFcQchVrWrJmKhWMVQfJ8LP9pWw/viewform"
-            />
-            <EventCard
               imageSrc="/static/events/cs club stem flyer.png"
               title="STEMForOthers Project Event"
               description="Dive into hands-on coding with three dynamic groups—revamp the STEMplore site, design an intermediate Java course, or translate lessons into Python and C++. Choose your crew, build something real."
@@ -170,15 +161,16 @@ const page = () => {
               rsvpUrl="https://forms.gle/UwmMgbQhD57Zou386"
             />
             <EventCard
-              isTBA={true}
               title="Electric Bluetooth Circuit Car Event - Day 2"
+              imageSrc = "/static/events/cs ebcc event.png"
               description="Get creative with 3D design as you craft and print your car's unique exterior shell. Turn your engineering vision into reality in this hands-on workshop!"
-              date="TBA"
-              location="TBA"
-              time="TBA"
+              date="6 June"
+              location="Building 60, Rm. 1420"
+              time="2:00 PM - 3:30 PM"
+              isInvitationOnly = {true}
               rsvpUrl="https://forms.gle/RRSre4LhTXs2kPH38"
             />
-            <EventCard
+            {/* <EventCard
               isTBA={true}
               title="Electric Bluetooth Circuit Car Event - Day 3"
               description="Race day is here! Put your custom-built car to the ultimate test in our grand finale event. Compete head-to-head, show off your engineering skills, and celebrate everyone's amazing creations!"
@@ -186,7 +178,7 @@ const page = () => {
               location="TBA"
               time="TBA"
               rsvpUrl="https://forms.gle/RRSre4LhTXs2kPH38"
-            />
+            /> */}
           </div>
           <a
             className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-xs md:text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition"
