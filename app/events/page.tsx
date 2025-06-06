@@ -61,17 +61,17 @@ const upcomingEvents: Event[] = [
     rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
     imageSrc: "/static/events/cs ebcc event.png",
   },
-  {
-    id: "12",
-    title: "Electric Bluetooth Circuit Car Event - Day 3",
-    description:
-      "Race day is here! Put your custom-built car to the ultimate test in our grand finale event. Compete head-to-head, show off your engineering skills, and celebrate everyone's amazing creations!",
-    date: "TBA",
-    time: "TBA",
-    location: "TBA",
-    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
-    imageSrc: "/static/events/cs ebcc event.png",
-  },
+  // {
+  //   id: "12",
+  //   title: "Electric Bluetooth Circuit Car Event - Day 3",
+  //   description:
+  //     "Race day is here! Put your custom-built car to the ultimate test in our grand finale event. Compete head-to-head, show off your engineering skills, and celebrate everyone's amazing creations!",
+  //   date: "TBA",
+  //   time: "TBA",
+  //   location: "TBA",
+  //   rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+  //   imageSrc: "/static/events/cs ebcc event.png",
+  // },
 ];
 
 const pastEvents = [
