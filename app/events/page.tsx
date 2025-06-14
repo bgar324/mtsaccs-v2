@@ -5,6 +5,7 @@ import Image from "next/image";
 import EventCard from "../components/EventCard";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import AnnouncementBanner from "../components/AnnouncementBanner";
 
 export const metadata: Metadata = {
   title: "Events & Workshops | Mt. SAC Computer Science Club",
@@ -38,17 +39,31 @@ type Event = {
   rsvpUrl: string;
 };
 
-const upcomingEvents: Event[] = [
+const upcomingEvents: Event[] = [];
+
+const spring2025Events = [
   {
-    id: "5",
-    imageSrc: "/static/events/cs club stem flyer.png",
-    title: "STEMForOthers Project Opportunity",
+    id: "10",
+    imageSrc: "/static/events/cs ebcc event.png",
+    title: "Electric Bluetooth Circuit Car Event - Day 1",
     description:
-      "Get involved in meaningful STEM projects that make a difference in our community.",
-    date: "Spring Fall to",
-    time: "-",
-    location: "Remote",
-    rsvpUrl: "https://forms.gle/UwmMgbQhD57Zou386",
+      "Construct your own Bluetooth car while learning about circuits and 3D design in this hands-on workshop!",
+    date: "2 May",
+    time: "3:00 PM - 7:00 PM",
+    location: "Building 60, Rm. 1620 & 1628",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+  },
+  {
+    id: "13",
+    imageSrc: "/static/events/cs club matcha.png",
+    title: "Art & Chill",
+    description:
+      "Join Art and Chill for a relaxing bracelet-making session designed to help you de-stress. Sip on matcha while vibing to chill music and connecting with others. Create, relax, and recharge before finals!",
+    date: "29 May",
+    time: "12:00 PM - 2:00 PM",
+    location: "Building 61 Room 1420",
+    rsvpUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSd67bKoCbkhTt1AU5ppIKiNFcQchVrWrJmKhWMVQfJ8LP9pWw/viewform",
   },
   {
     id: "11",
@@ -61,20 +76,20 @@ const upcomingEvents: Event[] = [
     rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
     imageSrc: "/static/events/cs ebcc event.png",
   },
-  // {
-  //   id: "12",
-  //   title: "Electric Bluetooth Circuit Car Event - Day 3",
-  //   description:
-  //     "Race day is here! Put your custom-built car to the ultimate test in our grand finale event. Compete head-to-head, show off your engineering skills, and celebrate everyone's amazing creations!",
-  //   date: "TBA",
-  //   time: "TBA",
-  //   location: "TBA",
-  //   rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
-  //   imageSrc: "/static/events/cs ebcc event.png",
-  // },
+  {
+    id: "5",
+    imageSrc: "/static/events/cs club stem flyer.png",
+    title: "STEMForOthers Project Opportunity",
+    description:
+      "Get involved in meaningful STEM projects that make a difference in our community.",
+    date: "Spring Fall to",
+    time: "-",
+    location: "Remote",
+    rsvpUrl: "https://forms.gle/UwmMgbQhD57Zou386",
+  },
 ];
 
-const pastEvents = [
+const fall2024Events = [
   {
     id: "6",
     imageSrc: "/static/events/smacs.png",
@@ -153,29 +168,6 @@ const pastEvents = [
     location: "Virtual",
     rsvpUrl: "https://lu.ma/vfidevu9",
   },
-  {
-    id: "10",
-    imageSrc: "/static/events/cs ebcc event.png",
-    title: "Electric Bluetooth Circuit Car Event - Day 1",
-    description:
-      "Construct your own Bluetooth car while learning about circuits and 3D design in this hands-on workshop!",
-    date: "2 May",
-    time: "3:00 PM - 7:00 PM",
-    location: "Building 60, Rm. 1620 & 1628",
-    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
-  },
-  {
-    id: "13",
-    imageSrc: "/static/events/cs club matcha.png",
-    title: "Art & Chill",
-    description:
-      "Join Art and Chill for a relaxing bracelet-making session designed to help you de-stress. Sip on matcha while vibing to chill music and connecting with others. Create, relax, and recharge before finals!",
-    date: "29 May",
-    time: "12:00 PM - 2:00 PM",
-    location: "Building 61 Room 1420",
-    rsvpUrl:
-      "https://docs.google.com/forms/d/e/1FAIpQLSd67bKoCbkhTt1AU5ppIKiNFcQchVrWrJmKhWMVQfJ8LP9pWw/viewform",
-  },
 ];
 
 const page = () => {
@@ -217,12 +209,16 @@ const page = () => {
         >
           Upcoming Events
         </h2>
-        <div
+        {/* dont delete this either */}
+        {/* <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
           role="list"
           aria-label="Event list"
-        >
-          {upcomingEvents.map((event) => (
+        > */}
+        {/* delete this when we're back in the fall (the div) */}
+        <div>
+          {/* dont delete this */}
+          {/* {upcomingEvents.map((event) => (
             <EventCard
               key={event.id}
               imageSrc={event.imageSrc}
@@ -234,7 +230,8 @@ const page = () => {
               rsvpUrl={event.rsvpUrl}
               isTBA={event.date.includes("TBA")}
             />
-          ))}
+          ))} */}
+          <AnnouncementBanner />
         </div>
       </section>
 
@@ -246,14 +243,45 @@ const page = () => {
           id="past-events"
           className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8"
         >
-          Past Events
+          Spring 2025 Events
         </h2>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
           role="list"
           aria-label="Event list"
         >
-          {pastEvents.map((event) => (
+          {spring2025Events.map((event) => (
+            <EventCard
+              key={event.id}
+              imageSrc={event.imageSrc}
+              title={event.title}
+              description={event.description}
+              date={event.date}
+              time={event.time}
+              location={event.location}
+              rsvpUrl={event.rsvpUrl}
+              isArchived={true}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section
+        className="w-full p-6 md:p-12 flex flex-col "
+        aria-labelledby="past-events"
+      >
+        <h2
+          id="past-events"
+          className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8"
+        >
+          Fall 2024 Events
+        </h2>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
+          role="list"
+          aria-label="Event list"
+        >
+          {fall2024Events.map((event) => (
             <EventCard
               key={event.id}
               imageSrc={event.imageSrc}

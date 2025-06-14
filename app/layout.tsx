@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins, EB_Garamond } from "next/font/google";
 import "./globals.css";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -130,6 +131,7 @@ export default function RootLayout({
       <body
         className={`font-sans ${geistSans.variable} ${geistMono.variable} antialiased bg-[#f8ecd4]`}
       >
+
         {children}
       </body>
     </html>

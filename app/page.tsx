@@ -7,6 +7,8 @@ import EventCard from "./components/EventCard";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import Form from "./components/Form";
+import AnnouncementBanner from "./components/AnnouncementBanner";
+import OfficerAnnouncementBanner from "./components/OfficerAnnouncementBanner";
 
 export const metadata: Metadata = {
   title: "Mt. SAC Computer Science Club",
@@ -77,6 +79,7 @@ const page = () => {
             />
           </div>
         </div>
+        <OfficerAnnouncementBanner />
         <section
           className="mx-auto p-6 md:p-12"
           aria-labelledby="about-heading"
@@ -150,35 +153,10 @@ const page = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2 my-4"
             role="list"
             aria-label="Event list"
-          >
-            <EventCard
-              imageSrc="/static/events/cs club stem flyer.png"
-              title="STEMForOthers Project Event"
-              description="Dive into hands-on coding with three dynamic groups—revamp the STEMplore site, design an intermediate Java course, or translate lessons into Python and C++. Choose your crew, build something real."
-              date="Spring Fall to"
-              location="Remote"
-              time="-"
-              rsvpUrl="https://forms.gle/UwmMgbQhD57Zou386"
-            />
-            <EventCard
-              title="Electric Bluetooth Circuit Car Event - Day 2"
-              imageSrc = "/static/events/cs ebcc event.png"
-              description="Get creative with 3D design as you craft and print your car's unique exterior shell. Turn your engineering vision into reality in this hands-on workshop!"
-              date="6 June"
-              location="Building 60, Rm. 1420"
-              time="2:00 PM - 3:30 PM"
-              isInvitationOnly = {true}
-              rsvpUrl="https://forms.gle/RRSre4LhTXs2kPH38"
-            />
-            {/* <EventCard
-              isTBA={true}
-              title="Electric Bluetooth Circuit Car Event - Day 3"
-              description="Race day is here! Put your custom-built car to the ultimate test in our grand finale event. Compete head-to-head, show off your engineering skills, and celebrate everyone's amazing creations!"
-              date="TBA"
-              location="TBA"
-              time="TBA"
-              rsvpUrl="https://forms.gle/RRSre4LhTXs2kPH38"
-            /> */}
+          ></div>
+          {/* Summer notice banner */}
+          <div className="my-2">
+            <AnnouncementBanner />
           </div>
           <a
             className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-xs md:text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition"
@@ -351,15 +329,20 @@ const page = () => {
                 </p>
                 <div className="flex flex-col gap-4">
                   <Form
+                    title="Officer Interest Form"
+                    href="https://forms.gle/1yn11Qd3LVjVeXHK7"
+                  />
+                  <Form
                     title="General Feedback Form"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSeacERWRiAnTlXoFRgdWw6ObGU5aqV79HIT5Od5um5mQwm1vg/viewform"
                   />
-                  <div
+
+                  {/* <div
                     className="py-2 border border-gray-400 rounded text-base font-medium text-center text-gray-500 bg-gray-100 cursor-not-allowed"
                     aria-label="Mt. SAC Computer Science Club Officer Interest Form. Coming soon."
                   >
                     Officer Interest Form (coming soon)!
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4 h-min">
