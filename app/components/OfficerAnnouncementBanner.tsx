@@ -21,7 +21,7 @@ const OfficerAnnouncementBanner: React.FC = () => {
         </Link>
         . Or, if you're ready to dive in,&nbsp;
         <Link
-          href="/apply"
+          href="https://forms.gle/1yn11Qd3LVjVeXHK7"
           className="font-semibold underline hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
         >
           apply now!
