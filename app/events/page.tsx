@@ -231,7 +231,7 @@ const page = () => {
               isTBA={event.date.includes("TBA")}
             />
           ))} */}
-          <AnnouncementBanner />
+          <AnnouncementBanner applicationsClosed season = "fall"/>
         </div>
       </section>
 
