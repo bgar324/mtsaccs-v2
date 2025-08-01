@@ -76,25 +76,6 @@ const page = () => {
 
       <section className="px-6 py-6 md:py-12" aria-labelledby="join-benefits">
         <div
-          className="bg-[#edd7b4] text-black text-center text-sm md:text-base py-3 px-4 shadow-md w-full max-w-6xl animate-fade-in mx-auto rounded-lg mb-8"
-          role="status"
-          aria-live="polite"
-        >
-          <p className="font-bold">🚨 Officer applications ARE OUT! 🚨</p>
-          <p className="mt-1 font-medium">
-            Ready to lead the club to new heights?&nbsp;
-            <a
-              href="https://forms.gle/1yn11Qd3LVjVeXHK7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold underline hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-            >
-              Apply to be an officer
-            </a>
-            &nbsp;today!
-          </p>
-        </div>
-        <div
           className="grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
           role="list"
         >

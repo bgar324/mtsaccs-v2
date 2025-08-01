@@ -79,7 +79,6 @@ const page = () => {
             />
           </div>
         </div>
-        <OfficerAnnouncementBanner />
         <section
           className="mx-auto p-6 md:p-12"
           aria-labelledby="about-heading"
@@ -156,7 +155,7 @@ const page = () => {
           ></div>
           {/* Summer notice banner */}
           <div className="my-2">
-            <AnnouncementBanner />
+            <AnnouncementBanner season = "fall" applicationsClosed/>
           </div>
           <a
             className="uppercase border-[1px] border-black w-fit text-center items-center mx-auto rounded-full text-xs md:text-sm py-1 px-3 flex flex-row gap-2 font-medium cursor-pointer bg-transparent text-black hover:bg-black hover:text-white duration-300 ease-in-out transition"
@@ -328,21 +327,21 @@ const page = () => {
                   form below to help shape our club.
                 </p>
                 <div className="flex flex-col gap-4">
-                  <Form
+                  {/* <Form
                     title="Officer Interest Form"
                     href="https://forms.gle/1yn11Qd3LVjVeXHK7"
-                  />
+                  /> */}
                   <Form
                     title="General Feedback Form"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSeacERWRiAnTlXoFRgdWw6ObGU5aqV79HIT5Od5um5mQwm1vg/viewform"
                   />
 
-                  {/* <div
+                  <div
                     className="py-2 border border-gray-400 rounded text-base font-medium text-center text-gray-500 bg-gray-100 cursor-not-allowed"
-                    aria-label="Mt. SAC Computer Science Club Officer Interest Form. Coming soon."
+                    aria-label="Mt. SAC Computer Science Club Officer Interest Form have closed."
                   >
-                    Officer Interest Form (coming soon)!
-                  </div> */}
+                    Officer Applications Closed.
+                  </div>
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col bg-[#FBF5E8] rounded-md p-4 h-min">
