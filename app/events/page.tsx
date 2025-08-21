@@ -39,7 +39,17 @@ type Event = {
   rsvpUrl: string;
 };
 
-const upcomingEvents: Event[] = [];
+const upcomingEvents: Event[] = [{
+    id: "6",
+    imageSrc: "/static/events/smacs.png",
+    title: "Hackathon Prep (SMACS)",
+    description:
+      "Learn essential skills and strategies to excel in hackathons.",
+    date: "23 October",
+    time: "-",
+    location: "Building 60, Room 1506",
+    rsvpUrl: "https://smacs.vercel.app/",
+  }];
 
 const spring2025Events = [
   {
