@@ -128,7 +128,7 @@ const page = () => {
             <OfficerCard
               name="Amanda Chang"
               role="President"
-              imageSrc="/static/people/Amanda.png"
+              imageSrc="/static/people/amanda.png"
               discordUsername="amanda_changg"
               linkedinUrl="https://www.linkedin.com/in/amanda-changg/"
             />
