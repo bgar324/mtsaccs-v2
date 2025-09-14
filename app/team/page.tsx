@@ -137,7 +137,7 @@ const page = () => {
               role="Secretary"
               imageSrc="/static/people/Yah.png"
               discordUsername="yaya04264"
-              linkedinUrl="/team"
+              linkedinUrl="https://www.linkedin.com/in/yahya-sidiqi-492605313/"
             />
             <OfficerCard
               name="Darren Lee"
