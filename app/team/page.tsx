@@ -124,15 +124,38 @@ const page = () => {
           </p>
         </div>
         <div className="flex flex-col gap-8">
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 xl:px-36 mx-auto"> */}
-          <div
-            className="backdrop-filter backdrop-blur-lg text-black text-center text-sm md:text-base py-3 px-4 shadow-lg border border-gray-300 rounded-lg w-full animate-fade-in mb-6 mx-auto"
-            role="status"
-            aria-live="polite"
-          >
-            <p className="font-base">Coming soon!</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 xl:px-36 mx-auto">
+            <OfficerCard
+              name="Amanda Chang"
+              role="President"
+              imageSrc="/static/people/Amanda.png"
+              discordUsername="amanda_changg"
+              linkedinUrl="https://www.linkedin.com/in/amanda-changg/"
+            />
+            <OfficerCard
+              name="Yahya Sidiqi"
+              role="Secretary"
+              imageSrc="/static/people/Yah.png"
+              discordUsername="yaya04264"
+              linkedinUrl="/team"
+            />
+            <OfficerCard
+              name="Darren Lee"
+              role="ICC Representative"
+              imageSrc="/static/people/Darren.png"
+              discordUsername="cybrrrrr"
+              linkedinUrl="https://www.linkedin.com/in/darrenlee226/"
+            />
+      
+            
+            <OfficerCard
+              name="Eric Yang"
+              role="Workshop Officer"
+              imageSrc="/static/people/Eric.png"
+              discordUsername="Itzystan2025"
+              linkedinUrl="https://www.linkedin.com/in/eric-yang-908333375/"
+            />
           </div>
-          {/* </div> */}
         </div>
       </section>
 
