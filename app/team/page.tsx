@@ -146,14 +146,26 @@ const page = () => {
               discordUsername="cybrrrrr"
               linkedinUrl="https://www.linkedin.com/in/darrenlee226/"
             />
-      
-            
+            <OfficerCard
+              name="Samuel Panorama"
+              role="Outreach"
+              imageSrc="/static/people/sam.png"
+              discordUsername="panoramaaa"
+              linkedinUrl="https://www.linkedin.com/in/spanorama/"
+            />
             <OfficerCard
               name="Eric Yang"
               role="Workshop Officer"
               imageSrc="/static/people/Eric.png"
               discordUsername="Itzystan2025"
               linkedinUrl="https://www.linkedin.com/in/eric-yang-908333375/"
+            />
+            <OfficerCard
+              name="Collin Wong"
+              role="Workshop Officer"
+              imageSrc="/static/people/collin.png"
+              discordUsername="collinizer"
+              linkedinUrl="https://www.linkedin.com/in/collin-wong-95486b389/"
             />
           </div>
         </div>
