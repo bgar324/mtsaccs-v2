@@ -120,7 +120,7 @@ const Footer = () => {
         {/* Bottom Row */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
           <div className="flex flex-col md:flex-row items-center text-center gap-2 md:gap-4">
-            <p>© 2025 Mt. SAC Computer Science Club. All rights reserved.</p>
+            <p>© 2026 Mt. SAC Computer Science Club. All rights reserved.</p>
             <p>
               Contact us at:
               <a
