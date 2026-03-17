@@ -265,7 +265,7 @@ const page = () => {
           id="past-events"
           className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8"
         >
-          Sprint 2026 Events
+          Spring 2026 Events
         </h2>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
