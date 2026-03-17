@@ -59,12 +59,38 @@ const spring2026Events = [
     imageSrc: "/static/events/TechSym.png",
     title: "Tech Symposium",
     description:
-      "A student_led cybersecurity & technology conference for everyone",
+      "A student-led cybersecurity & technology conference for everyone",
     date: "14 March",
     time: "10:00 AM - 5:00 PM",
     location: "Building 410, 3rd floor",
     rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
   }
+];
+
+const fall2025Events = [
+  {
+    id: "15",
+    imageSrc: "/static/events/HackathonFlyer.png",
+    title: "Hackathon",
+    description:
+      "Mt.Sac Computer Science Club Hackathon",
+    date: "24 October",
+    time: "8:00 AM - 3:00 PM",
+    location: "Building 61, Rm 2311",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+  },
+  {
+    id: "16",
+    imageSrc: "/static/events/Nintendo.png",
+    title: "Nintendo DS Pong Event",
+    description:
+      "Learn how to create Pong that works on a Nintendo DS",
+    date: "14 November",
+    time: "2:00 PM - 5:00 PM",
+    location: "Building 61, Rm 2311",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+  }
+
 ];
 
 const spring2025Events = [
@@ -226,7 +252,7 @@ const page = () => {
         </div>
       </div>
       <section
-        className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]"
+        className="w-full p-6 md:p-12 flex flex-col "
         aria-labelledby="upcoming-events"
       >
         <h2
@@ -258,7 +284,7 @@ const page = () => {
       </section>
 
       <section
-        className="w-full p-6 md:p-12 flex flex-col "
+        className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]"
         aria-labelledby="past-events"
       >
         <h2
@@ -268,11 +294,42 @@ const page = () => {
           Spring 2026 Events
         </h2>
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2 "
           role="list"
           aria-label="Event list"
         >
           {spring2026Events.map((event) => (
+            <EventCard
+              key={event.id}
+              imageSrc={event.imageSrc}
+              title={event.title}
+              description={event.description}
+              date={event.date}
+              time={event.time}
+              location={event.location}
+              rsvpUrl={event.rsvpUrl}
+              isArchived={true}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section
+        className="w-full p-6 md:p-12 flex flex-col "
+        aria-labelledby="past-events"
+      >
+        <h2
+          id="past-events"
+          className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8"
+        >
+          Fall 2025 Events
+        </h2>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
+          role="list"
+          aria-label="Event list"
+        >
+          {fall2025Events.map((event) => (
             <EventCard
               key={event.id}
               imageSrc={event.imageSrc}
