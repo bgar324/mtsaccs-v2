@@ -39,7 +39,33 @@ type Event = {
   rsvpUrl: string;
 };
 
-const upcomingEvents: Event[] = [];
+const upcomingEvents: Event[] = [
+  {
+    id: "21",
+    imageSrc: "/static/events/StemSlam.png",
+    title: "Stem Slam",
+    description:
+      "This event brings together students from different stem majors and club",
+    date: "20 March",
+    time: "1:30 PM - 3:30 PM",
+    location: "Building 410, 2nd floor",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+  }
+];
+
+const spring2026Events = [
+  {
+    id: "20",
+    imageSrc: "/static/events/TechSym.png",
+    title: "Tech Symposium",
+    description:
+      "A student_led cybersecurity & technology conference for everyone",
+    date: "14 March",
+    time: "10:00 AM - 5:00 PM",
+    location: "Building 410, 3rd floor",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+  }
+];
 
 const spring2025Events = [
   {
@@ -200,7 +226,7 @@ const page = () => {
         </div>
       </div>
       <section
-        className="w-full p-6 md:p-12 flex flex-col"
+        className="w-full p-6 md:p-12 flex flex-col bg-[#edd7b4]"
         aria-labelledby="upcoming-events"
       >
         <h2
@@ -209,16 +235,13 @@ const page = () => {
         >
           Upcoming Events
         </h2>
-        {/* dont delete this either */}
-        {/* <div
+        
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
           role="list"
           aria-label="Event list"
-        > */}
-        {/* delete this when we're back in the fall (the div) */}
-        <div>
-          {/* dont delete this */}
-          {/* {upcomingEvents.map((event) => (
+        >
+           {upcomingEvents.map((event) => (
             <EventCard
               key={event.id}
               imageSrc={event.imageSrc}
@@ -230,8 +253,38 @@ const page = () => {
               rsvpUrl={event.rsvpUrl}
               isTBA={event.date.includes("TBA")}
             />
-          ))} */}
-          <AnnouncementBanner applicationsClosed season = "fall"/>
+          ))} 
+        </div>
+      </section>
+
+      <section
+        className="w-full p-6 md:p-12 flex flex-col "
+        aria-labelledby="past-events"
+      >
+        <h2
+          id="past-events"
+          className="text-start font-garamond font-thin text-3xl md:text-5xl mb-8"
+        >
+          Sprint 2026 Events
+        </h2>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
+          role="list"
+          aria-label="Event list"
+        >
+          {spring2026Events.map((event) => (
+            <EventCard
+              key={event.id}
+              imageSrc={event.imageSrc}
+              title={event.title}
+              description={event.description}
+              date={event.date}
+              time={event.time}
+              location={event.location}
+              rsvpUrl={event.rsvpUrl}
+              isArchived={true}
+            />
+          ))}
         </div>
       </section>
 
