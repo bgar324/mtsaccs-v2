@@ -49,7 +49,7 @@ const upcomingEvents: Event[] = [
     date: "20 March",
     time: "1:30 PM - 3:30 PM",
     location: "Building 410, 2nd floor",
-    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
+    rsvpUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeBrAws4rJIp4gfcfk3c1n1jEYQ_0ZJXbLrXw32inDzhdK-cw/viewform",
   }
 ];
 
@@ -63,7 +63,7 @@ const spring2026Events = [
     date: "14 March",
     time: "10:00 AM - 5:00 PM",
     location: "Building 410, 3rd floor",
-    rsvpUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeBrAws4rJIp4gfcfk3c1n1jEYQ_0ZJXbLrXw32inDzhdK-cw/viewform",
+    rsvpUrl: "https://forms.gle/RRSre4LhTXs2kPH38",
   }
 ];
 
